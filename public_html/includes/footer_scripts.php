@@ -13,7 +13,6 @@
 <!--<script src="<?php echo res_url('js/third_party/require/require.js'); ?>"></script>-->
 
 <!-- Lightboxes -->
-<!--<script src="<?php echo res_url('js/third_party/fancybox/jquery.fancybox.js'); ?>"></script>-->
 <!--<script src="<?php echo res_url('js/third_party/colorbox/jquery.colorbox.js'); ?>"></script>-->
 <!--<script src="<?php echo res_url('js/third_party/magnific-popup/dist/jquery.magnific-popup.js'); ?>"></script>-->
 

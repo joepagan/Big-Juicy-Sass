@@ -24,10 +24,7 @@
 
   <!--[if lt IE 8]>
     <link rel="stylesheet" href="<?php echo res_url('css/ie7.css'); ?>" type="text/css" />
-  <![endif]-->  
-
-  <!-- Fancybox Styles -->
-  <!--<link rel="stylesheet" type="text/css" href="<?php echo res_url('js/third_party/fancybox/jquery.fancybox.css'); ?>" />-->
+  <![endif]-->
 
   <!-- Magnific Popup Styles -->
   <!--<link rel="stylesheet" type="text/css" href="<?php echo res_url('js/third_party/magnific-popup/dist/magnific-popup.css'); ?>" />-->  

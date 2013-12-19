@@ -23,11 +23,10 @@ Options +FollowSymLinks
 
 # Make sure URL contains primary domain and starts with www. (excluding test domain)
 # RewriteCond %{HTTP_HOST} !www.your-domain.com$ [NC]
-# RewriteCond %{HTTP_HOST} !yourdomain.extremeserver4.co.uk [NC]
 # RewriteRule ^(.*)$ http://www.your-domain.com/$1 [R=301,L]
 
 # Re-write requests to robots.txt on test domain to robots_dev.txt containing disallow
-#RewriteCond %{HTTP_HOST} =yoursite.extremeserver5.co.uk
+#RewriteCond %{HTTP_HOST} =dev.url.com
 #RewriteRule ^robots\.txt$ /robots_dev.txt [L]
 
 # Route requests through index.php except for the following
