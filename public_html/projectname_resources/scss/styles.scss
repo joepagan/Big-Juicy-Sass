@@ -1,0 +1,66 @@
+@import "compass";
+@import "animate";
+@import "mixins";
+
+// @include animate;
+
+//@include "ceaser-easing";
+
+@charset "UTF-8";
+
+// Colours
+
+$white:#fff;
+$black:#000;
+$grey:#999;
+$darkGrey:#333;
+
+// Globals
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html{
+	min-height:100%;
+	height:100%;
+}
+
+body{
+	position:static;
+	min-height:100%;
+	background:$white;
+	@include selection($white, $darkGrey);
+	p{
+		color:$grey;
+		font-size:emCalc(14px);
+		@include selection($white, $darkGrey);
+	}
+}
+
+a{
+	@include transition(.3s ease-in-out all);	
+	img{
+		position:relative;
+		@include transition(.3s ease-in-out all);
+		display: block;
+		-webkit-backface-visibility: hidden;
+	}
+	&:hover{		
+		img{
+			@include opacity(.8);
+		}
+	}
+}
+
+.clear{
+	clear:both;
+}
+
+.hidden{
+	display:none;
+}
