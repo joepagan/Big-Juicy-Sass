@@ -10,6 +10,8 @@
 <!--<script src="<?php= $res; ?>/js/third_party/chosen/chosen.jquery.min.js"></script>-->
 <!--<script src="<?php= $res; ?>/js/third_party/columnizer/jquery.columnizer.js"></script>-->
 
+<!--<script src="<?php= $res; ?>/js/third_party/isotope/jquery.isotope.min.js"></script>-->
+
 <!-- Lightboxes -->
 <!--<script src="<?php= $res; ?>/js/third_party/colorbox/jquery.colorbox.js"></script>-->
 

@@ -41,6 +41,9 @@
       <link rel="stylesheet" type="text/css" href="<?php= $res; ?>/js/third_party/colorbox/example5/colorbox.css" />
   -->
 
+  <!-- Isotope -->
+  <!--<link rel="stylesheet" type="text/css" href="<?php= $res; ?>/js/third_party/isotope/isotope.css" />-->
+
   <!-- Flex Slider -->
   <!--<link rel="stylesheet" type="text/css" href="<?php= $res; ?>/js/third_party/flexslider/flexslider.css" />-->
 
@@ -54,10 +57,10 @@
   -->
 
   <!-- Apple icons
-  <link rel="apple-touch-icon-precomposed" href="<?php= $res; ?>/images/icons/apple-touch-icon-iphone.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php= $res; ?>/images/icons/apple-touch-icon-ipad.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php= $res; ?>/images/icons/apple-touch-icon-iphone4.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php= $res; ?>/images/icons/apple-touch-icon-ipad3.png" />
+  <link rel="apple-touch-icon" href="<?php= $res; ?>/images/icons/touch-icon-iphone.png" /> 
+  <link rel="apple-touch-icon" sizes="76x76" href="<?php= $res; ?>/images/icons/touch-icon-ipad.png" /> 
+  <link rel="apple-touch-icon" sizes="120x120" href="<?php= $res; ?>/images/icons/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="<?php= $res; ?>/images/icons/touch-icon-ipad-retina.png" />
   -->
 
   <!-- Open Graph Protocol -->
