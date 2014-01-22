@@ -3,13 +3,7 @@
 
 <html lang="en">
 
-	<?
-		// Resources path
-		function res_url($path){
-   			return '/projectname_resources/' . $path;
-   		}	
-
-	?>
+	<?php $res = '/projectname_resources/';	?>
 
   	<?php include('includes/head.php'); ?>
 

@@ -1,10 +1,30 @@
+// Stable version of compass v0.12
 @import "compass";
-@import "animate";
-@import "mixins";
 
+// Compass Animate
+// - for compass 0.13, but still mostly works in compass 0.12
+// https://github.com/ericam/compass-animate
+@import "animate";
+
+// Hover.css 
+// - Included both the css one & the scss version, I think scss one conflicts with compass
+// http://ianlunn.github.io/Hover/
+// @import "hover"
+// @import url("../css/hover-min.css");
+
+// Including the mixins for Compass Animate
 // @include animate;
 
+// Ceaser Easing
 //@include "ceaser-easing";
+
+// Custom mixins
+@import "mixins";
+
+// A function that converts pixels to "em"s
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
 
 @charset "UTF-8";
 
@@ -37,7 +57,7 @@ body{
 	@include selection($white, $darkGrey);
 	p{
 		color:$grey;
-		font-size:emCalc(14px);
+		font-size:em(14px);
 		@include selection($white, $darkGrey);
 	}
 }
