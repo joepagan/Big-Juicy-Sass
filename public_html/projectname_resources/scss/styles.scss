@@ -1,25 +1,36 @@
 // Stable version of compass v0.12
-@import "compass";
+// @import "compass/compass";
+
+// Bourbon v2.1
+// http://bourbon.io/
+// @import "bourbon/bourbon";
+
+// Neat v1.5
+// http://neat.bourbon.io/
+// @import "neat/neat"
 
 // Compass Animate
 // - for compass 0.13, but still mostly works in compass 0.12
 // https://github.com/ericam/compass-animate
-@import "animate";
+// @import "animate/animate";
+// Including the mixins for Compass Animate
+// @include animate;
 
 // Hover.css 
 // - Included both the css one & the scss version, I think scss one conflicts with compass
 // http://ianlunn.github.io/Hover/
-// @import "hover"
+// @import "hover/hover"
 // @import url("../css/hover-min.css");
 
-// Including the mixins for Compass Animate
-// @include animate;
-
 // Ceaser Easing
+//@import "ceaser-easing/ceaser-easing";
 //@include "ceaser-easing";
 
 // Custom mixins
 @import "mixins";
+
+// Base font size set so the function below can work
+$base-font-size:14px;
 
 // A function that converts pixels to "em"s
 @function em($px, $base: $base-font-size) {
