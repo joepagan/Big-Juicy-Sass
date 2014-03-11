@@ -3,7 +3,7 @@
 
 <html lang="en">
 
-	<?php $res = '/projectname_resources/';	?>
+	<?php $res = '/resources/';	?>
 
   	<?php include('includes/head.php'); ?>
 
