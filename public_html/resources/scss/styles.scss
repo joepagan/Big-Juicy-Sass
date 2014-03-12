@@ -1,4 +1,4 @@
-// Bourbon v2.1 (266kb)
+// Bourbon v3.1.8 (225kb)
 // http://bourbon.io/
 // @import "bourbon/bourbon";
 
@@ -88,7 +88,7 @@ a{
 	}
 	&:hover{		
 		img{
-			@include opacity(.8);
+			//@include opacity(.8);
 		}
 	}
 }

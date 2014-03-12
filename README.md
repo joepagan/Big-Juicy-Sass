@@ -9,7 +9,7 @@ It uses php, so it's quite useful for templating on a local mamp/xampp environme
 Yup, it's using Sass with compass/bourbon
 Includes:
 
-- Bourbon v2.1 - [http://bourbon.io/](http://bourbon.io)
+- Bourbon v3.1.8 - [http://bourbon.io/](http://bourbon.io)
 - - Neat v1.5 - [http://neat.bourbon.io/](http://neat.bourbon.io/)
 - Compass v0.12 - [https://github.com/chriseppstein/compass](https://github.com/chriseppstein/compass)
 - - Compass Animate - [https://github.com/ericam/compass-animation](https://github.com/ericam/compass-animation)
