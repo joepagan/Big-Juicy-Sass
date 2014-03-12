@@ -16,6 +16,7 @@ Includes:
 - - Ceaser Easing - [https://github.com/jhardy/compass-ceaser-easing](https://github.com/jhardy/compass-ceaser-easing)
 - Hover.css - [http://ianlunn.github.io/Hover/](http://ianlunn.github.io/Hover/)
 - Effeckt.css - [https://github.com/h5bp/Effeckt.css](https://github.com/h5bp/Effeckt.css)
+- REM - [https://github.com/ry5n/rem/](https://github.com/ry5n/rem/)
 
 ## JS/jQuery
 Lots of plugin here:
