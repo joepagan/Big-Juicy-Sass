@@ -1,30 +1,34 @@
-// Stable version of compass v0.12
-// @import "compass/compass";
-
-// Bourbon v2.1
+// Bourbon v2.1 (266kb)
 // http://bourbon.io/
 // @import "bourbon/bourbon";
 
-// Neat v1.5
+// Neat v1.5 (86kb)
 // http://neat.bourbon.io/
 // @import "neat/neat"
 
-// Compass Animate
+
+// Stable version of compass v0.12 (455kb)
+// @import "compass/compass";
+
+// Compass Animate (164kb)
 // - for compass 0.13, but still mostly works in compass 0.12
 // https://github.com/ericam/compass-animate
 // @import "animate/animate";
 // Including the mixins for Compass Animate
 // @include animate;
 
-// Hover.css 
+// Ceaser Easing (29kb)
+//@import "ceaser-easing/ceaser-easing";
+//@include "ceaser-easing";
+
+// Hover.css (217kb)
 // - Included both the css one & the scss version, I think scss one conflicts with compass
 // http://ianlunn.github.io/Hover/
 // @import "hover/hover"
 // @import url("../css/hover-min.css");
 
-// Ceaser Easing
-//@import "ceaser-easing/ceaser-easing";
-//@include "ceaser-easing";
+// Effeckt.css (200kb)
+//@import "effeckt/effeckt"
 
 // Custom mixins
 @import "mixins";
@@ -54,6 +58,7 @@ $darkGrey:#333;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 html{

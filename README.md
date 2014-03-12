@@ -1,9 +1,11 @@
 Big-Juicy-Sass
 ==============
 
-Just my own personal boilerplate, you don't have to use it, but it's filled with plugins and such. Uses php, so this good for templating on a mamp/xampp environment
+Just my own personal boilerplate, you don't have to use it, but it's filled with plugins that I find really useful. 
 
-## SASS/SCSS
+It uses php, so it's quite useful for templating on a local mamp/xampp environment.
+
+## SASS/SCSS/CSS
 Yup, it's using Sass with compass/bourbon
 Includes:
 
@@ -13,7 +15,7 @@ Includes:
 - - Compass Animate - [https://github.com/ericam/compass-animation](https://github.com/ericam/compass-animation)
 - - Ceaser Easing - [https://github.com/jhardy/compass-ceaser-easing](https://github.com/jhardy/compass-ceaser-easing)
 - Hover.css - [http://ianlunn.github.io/Hover/](http://ianlunn.github.io/Hover/)
-
+- Effeckt.css - [https://github.com/h5bp/Effeckt.css](https://github.com/h5bp/Effeckt.css)
 
 ## JS/jQuery
 Lots of plugin here:
