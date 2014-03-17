@@ -15,7 +15,8 @@
 <?php // Internet explorer (if you give a crap)
   /*
     <!--[if lt IE 9]>
-      <script src="<?php echo $res; ?>/js/third_party/html5shiv/html5shiv.js"></script>
+      <script src="<?php echo $res; ?>/js/third_party/html5shiv/html5shiv.min.js"></script>
+      <script src="<?php echo $res; ?>/js/third_party/html5shiv/html5shiv-printshiv.min.js"></script>
     <![endif]-->
 
     <!--[if IE 8]>

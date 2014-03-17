@@ -23,6 +23,8 @@ Lots of plugin here:
 
 - jQuery 1.10.1 (CDN)
 - jQuery UI 1.8.9 (CDN)
+- HTML5 Shiv 3.7.0
+- - printshiv 3.7.0
 - bootstrap.js 2.1.1 - [http://getbootstrap.com/](http://getbootstrap.com/)
 - tooltipster 2.1.4 - [http://iamceege.github.io/tooltipster/](http://iamceege.github.io/tooltipster/)
 - uniform 2.1.0 - [http://uniformjs.com/](http://uniformjs.com/)
