@@ -1,5 +1,5 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.js"></script>
 <!-- General scripts -->
 <!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>-->
 <!--<script src="<?php echo $res; ?>/js/third_party/bootstrap/bootstrap.js"></script>-->
