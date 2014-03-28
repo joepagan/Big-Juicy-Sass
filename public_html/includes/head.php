@@ -27,7 +27,7 @@
       <link rel="stylesheet" href="<?php echo $res; ?>/css/ie7.css" type="text/css" />
     <![endif]-->
   */ 
-?>  
+?> 
 
   <? /* Colorbox Styles  */ ?>
   <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example1/colorbox.css" /> */ ?>
@@ -36,6 +36,8 @@
   <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example4/colorbox.css" /> */ ?>
   <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example5/colorbox.css" /> */ ?>
   
+  <? /* Magnific Styles  */ ?>
+  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/magnific/magnific-popup.css" /> */ ?>
 
   <? /*  Isotope  */ ?>
   <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/isotope/isotope.css" /> */ ?>

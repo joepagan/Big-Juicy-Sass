@@ -1,12 +1,12 @@
 Big-Juicy-Sass
 ==============
 
-Just my own personal boilerplate, you don't have to use it, but it's filled with plugins that I find really useful. 
+Just my own personal boilerplate, you don't have to use it, but it's filled with stuff that I find really useful.
 
-It uses php, so it's quite useful for templating on a local mamp/xampp environment.
+I find it quite useful for templating on a local environment with includes and such.
 
 ## SASS/SCSS/CSS
-Yup, it's using Sass with compass/bourbon
+Yup, it's using Sass with compass/bourbon, both are in, though commented out (so you can decide what to use)
 Includes:
 
 - Bourbon v3.1.8 - [http://bourbon.io/](http://bourbon.io)
@@ -21,10 +21,10 @@ Includes:
 ## JS/jQuery
 Lots of plugin here:
 
-- jQuery 1.10.1 (CDN)
+- jQuery 1.10.1 (CDN local fallback)
 - jQuery UI 1.8.9 (CDN)
-- HTML5 Shiv 3.7.0
-- - printshiv 3.7.0
+- HTML5 Shiv 3.7.0 - [https://github.com/aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
+- - printshiv 3.7.0 - as above
 - bootstrap.js 2.1.1 - [http://getbootstrap.com/](http://getbootstrap.com/)
 - tooltipster 2.1.4 - [http://iamceege.github.io/tooltipster/](http://iamceege.github.io/tooltipster/)
 - uniform 2.1.0 - [http://uniformjs.com/](http://uniformjs.com/)
@@ -33,6 +33,7 @@ Lots of plugin here:
 - Columnizer 1.6 - [https://github.com/adamwulf/Columnizer-jQuery-Plugin](https://github.com/adamwulf/Columnizer-jQuery-Plugin)
 - Isotope 1.5.25 (Do not use without a license!) - [https://github.com/desandro/isotope](https://github.com/desandro/isotope)
 - Mixitup 2.0.4 (Do not use without a license!) - [https://github.com/patrickkunka/mixitup](https://github.com/patrickkunka/mixitup)
+- Magnific 0.9.9 - [https://github.com/dimsemenov/magnific-popup/](https://github.com/dimsemenov/magnific-popup/)
 - Colorbox 1.4.15 - [https://github.com/jackmoore/colorbox](https://github.com/jackmoore/colorbox)
 - jQuery Cycle 2.0 - [https://github.com/malsup/cycle2](https://github.com/malsup/cycle2)
 - Flexslider 2.2.2 - [https://github.com/woothemes/FlexSlider](https://github.com/woothemes/FlexSlider)
