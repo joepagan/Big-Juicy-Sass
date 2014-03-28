@@ -21,7 +21,7 @@ Includes:
 ## JS/jQuery
 Lots of plugin here:
 
-- jQuery 1.10.1 (CDN local fallback)
+- jQuery 1.11.0 (CDN & local fallback)
 - jQuery UI 1.8.9 (CDN)
 - HTML5 Shiv 3.7.0 - [https://github.com/aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
 - - printshiv 3.7.0 - as above
