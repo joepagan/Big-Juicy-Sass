@@ -4,8 +4,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <meta charset="utf-8" />
-  <? /* responsive tag  */ ?>
-  <? /* <meta name="viewport" content="width=device-width" /> */ ?>
+  <?php /* responsive tag  */ ?>
+  <?php /* <meta name="viewport" content="width=device-width" /> */ ?>
 
   <title></title>
   
@@ -18,7 +18,7 @@
     <script src="<?php echo $res; ?>/js/third_party/html5shiv/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 
-<? /*
+<?php /*
     <!--[if lte IE 8]>
       <link rel="stylesheet" href="<?php echo $res; ?>/css/ie8.css" type="text/css" />
     <![endif]-->
@@ -27,26 +27,32 @@
       <link rel="stylesheet" href="<?php echo $res; ?>/css/ie7.css" type="text/css" />
     <![endif]-->
   */ 
-?> 
+?>
 
-  <? /* Colorbox Styles  */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example1/colorbox.css" /> */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example2/colorbox.css" /> */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example3/colorbox.css" /> */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example4/colorbox.css" /> */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example5/colorbox.css" /> */ ?>
+  <?php /* noUiSlider */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/nouislider/jquery.nouislider.min.css" /> */ ?>
+
+  <?php /* soc.js */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/socjs/soc.min.css" /> */ ?>
+
+  <?php /* Colorbox Styles  */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example1/colorbox.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example2/colorbox.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example3/colorbox.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example4/colorbox.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example5/colorbox.css" /> */ ?>
   
-  <? /* Magnific Styles  */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/magnific/magnific-popup.css" /> */ ?>
+  <?php /* Magnific Styles  */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/magnific/magnific-popup.css" /> */ ?>
 
-  <? /*  Isotope  */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/isotope/isotope.css" /> */ ?>
+  <?php /*  Isotope  */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/isotope/isotope.css" /> */ ?>
 
-  <? /*  Flex Slider  */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/flexslider/flexslider.css" /> */ ?>
+  <?php /*  Flex Slider  */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/flexslider/flexslider.css" /> */ ?>
 
-  <? /*  Chosen  */ ?>
-  <? /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/chosen/chosen.min.css" /> */ ?>
+  <?php /*  Chosen  */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/chosen/chosen.min.css" /> */ ?>
 
 <?php /* Favicons 
   use http://www.xiconeditor.com to create 64/32/24/16 versions, all in one .ico

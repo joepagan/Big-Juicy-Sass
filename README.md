@@ -40,4 +40,5 @@ Lots of plugin here:
 - jQuery Validate 1.11.1 - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
 - Waypoints 2.0.4 - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
 - jQuery noUiSlider - [https://github.com/leongersen/noUiSlider](https://github.com/leongersen/noUiSlider)
+- soc.js - [https://github.com/jivinivan/soc.js](https://github.com/jivinivan/soc.js)
 - date.js 1.0 - [http://www.datejs.com/](http://www.datejs.com/)
