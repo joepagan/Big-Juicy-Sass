@@ -38,5 +38,6 @@ Lots of plugin here:
 - jQuery Cycle 2.0 - [https://github.com/malsup/cycle2](https://github.com/malsup/cycle2)
 - Flexslider 2.2.2 - [https://github.com/woothemes/FlexSlider](https://github.com/woothemes/FlexSlider)
 - jQuery Validate 1.11.1 - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
-- Waypoints 2.0.2 - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
+- Waypoints 2.0.4 - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
+- jQuery noUiSlider - [https://github.com/leongersen/noUiSlider](https://github.com/leongersen/noUiSlider)
 - date.js 1.0 - [http://www.datejs.com/](http://www.datejs.com/)

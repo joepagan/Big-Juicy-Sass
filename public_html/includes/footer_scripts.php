@@ -17,12 +17,13 @@
 <? /*<script src="<?php echo $res; ?>/js/third_party/columnizer/jquery.columnizer.js"></script> */ ?>
 <? /*<script src="<?php echo $res; ?>/js/third_party/validate/jquery.validate.min.js"></script> */ ?>
 <? /*<script src="<?php echo $res; ?>/js/third_party/waypoints/waypoints.min.js"></script> */ ?>
+<? /*<script src="<?php echo $res; ?>/js/third_party/nouislider/nouislider.min.js"></script> */ ?>
 
 <? /* Lightboxes  */ ?>
 <? /*<script src="<?php echo $res; ?>/js/third_party/magnific/jquery.magnific-popup.min.js"></script> */ ?>
 <? /*<script src="<?php echo $res; ?>/js/third_party/colorbox/jquery.colorbox.js"></script> */ ?>
 
-<? /* Sliders  */ ?>
+<? /* Rotators */ ?>
 <? /*<script src="<?php echo $res; ?>/js/third_party/cycle2/jquery.cycle2.js"></script> */ ?>
 <? /*<script src="<?php echo $res; ?>/js/third_party/flexslider/jquery.flexslider-min.js"></script> */ ?>
 
