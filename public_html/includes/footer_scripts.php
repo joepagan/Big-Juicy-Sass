@@ -25,6 +25,7 @@
 <?php /*<script src="<?php echo $res; ?>/js/third_party/colorbox/jquery.colorbox.js"></script> */ ?>
 
 <?php /* Rotators */ ?>
+<?php /*<script src="<?php echo $res; ?>/js/third_party/slick/slick.min.js"></script> */ ?>
 <?php /*<script src="<?php echo $res; ?>/js/third_party/cycle2/jquery.cycle2.js"></script> */ ?>
 <?php /*<script src="<?php echo $res; ?>/js/third_party/flexslider/jquery.flexslider-min.js"></script> */ ?>
 

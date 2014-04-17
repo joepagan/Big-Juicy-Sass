@@ -37,6 +37,7 @@ Lots of plugin here:
 - Colorbox 1.4.15 - [https://github.com/jackmoore/colorbox](https://github.com/jackmoore/colorbox)
 - jQuery Cycle 2.0 - [https://github.com/malsup/cycle2](https://github.com/malsup/cycle2)
 - Flexslider 2.2.2 - [https://github.com/woothemes/FlexSlider](https://github.com/woothemes/FlexSlider)
+- Slick - [http://kenwheeler.github.io/slick/](http://kenwheeler.github.io/slick/)
 - jQuery Validate 1.11.1 - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
 - Waypoints 2.0.4 - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
 - jQuery noUiSlider - [https://github.com/leongersen/noUiSlider](https://github.com/leongersen/noUiSlider)

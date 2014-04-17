@@ -48,8 +48,11 @@
   <?php /*  Isotope  */ ?>
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/isotope/isotope.css" /> */ ?>
 
-  <?php /*  Flex Slider  */ ?>
+  <?php /*  Flexslider  */ ?>
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/flexslider/flexslider.css" /> */ ?>
+
+  <?php /* Slick */ ?>
+  <?php /*<script src="<?php echo $res; ?>/js/third_party/slick/slick.css"></script> */ ?>
 
   <?php /*  Chosen  */ ?>
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/chosen/chosen.min.css" /> */ ?>
