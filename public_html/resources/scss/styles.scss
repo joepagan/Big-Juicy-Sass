@@ -37,7 +37,7 @@
 @import "mixins";
 
 // Base font size set so the function below can work
-$base-font-size:14px;
+$base-font-size:16px;
 
 // A function that converts pixels to "em"s
 @function em($px, $base: $base-font-size) {
@@ -70,26 +70,25 @@ html{
 }
 
 body{
-	position:static;
 	min-height:100%;
 	background:$white;
 	@include selection($white, $darkGrey);
 	p{
 		color:$grey;
-		font-size:em(14px);
+		font-size:14px;
 		@include selection($white, $darkGrey);
 	}
 }
 
 a{
-	@include transition(.3s ease-in-out all);	
+	@include transition(.3s ease-in-out all);
 	img{
 		position:relative;
+    display: block;
 		@include transition(.3s ease-in-out all);
-		display: block;
-		-webkit-backface-visibility: hidden;
+		@include backface-visibility(hidden);
 	}
-	&:hover{		
+	&:hover{
 		img{
 			//@include opacity(.8);
 		}

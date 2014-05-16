@@ -8,7 +8,7 @@
   <?php /* <meta name="viewport" content="width=device-width" /> */ ?>
 
   <title></title>
-  
+
   <link rel="stylesheet" href="<?php echo $res; ?>/css/normalize.css" />
   <link rel="stylesheet" href="<?php echo $res; ?>/css/styles.css" />
 
@@ -26,7 +26,7 @@
     <!--[if lte IE 7]>
       <link rel="stylesheet" href="<?php echo $res; ?>/css/ie7.css" type="text/css" />
     <![endif]-->
-  */ 
+  */
 ?>
 
   <?php /* noUiSlider */ ?>
@@ -41,7 +41,7 @@
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example3/colorbox.css" /> */ ?>
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example4/colorbox.css" /> */ ?>
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example5/colorbox.css" /> */ ?>
-  
+
   <?php /* Magnific Styles  */ ?>
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/magnific/magnific-popup.css" /> */ ?>
 
@@ -52,12 +52,12 @@
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/flexslider/flexslider.css" /> */ ?>
 
   <?php /* Slick */ ?>
-  <?php /*<script src="<?php echo $res; ?>/js/third_party/slick/slick.css"></script> */ ?>
+  <?php /*<link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/slick/slick.css">*/ ?>
 
   <?php /*  Chosen  */ ?>
   <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/chosen/chosen.min.css" /> */ ?>
 
-<?php /* Favicons 
+<?php /* Favicons
   use http://www.xiconeditor.com to create 64/32/24/16 versions, all in one .ico
   Or try a new service http://realfavicongenerator.net/ which creates desktop, ios, android home screen, windows 8 tiles, windows taskbar, windows surface icons too.
   */
@@ -67,12 +67,12 @@
   */
 ?>
 
-<?php /* Apple icons 
-    <link rel="apple-touch-icon" href="<?php echo $res; ?>/images/icons/touch-icon-iphone.png" /> 
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $res; ?>/images/icons/touch-icon-ipad.png" /> 
+<?php /* Apple icons
+    <link rel="apple-touch-icon" href="<?php echo $res; ?>/images/icons/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $res; ?>/images/icons/touch-icon-ipad.png" />
     <link rel="apple-touch-icon" sizes="120x120" href="<?php echo $res; ?>/images/icons/touch-icon-iphone-retina.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="<?php echo $res; ?>/images/icons/touch-icon-ipad-retina.png" />
-  */ 
+  */
 ?>
 
 <?php // Open graph protocol
@@ -92,6 +92,6 @@
     <meta name="twitter:title" content="" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="" />
-  */ 
+  */
 ?>
 </head>
