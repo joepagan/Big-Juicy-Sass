@@ -10,12 +10,13 @@
   <title></title>
 
   <link rel="stylesheet" href="<?php echo $res; ?>/css/normalize.css" />
-  <link rel="stylesheet" href="<?php echo $res; ?>/css/styles.css" />
+  <link rel="stylesheet" href="<?php echo $res; ?>/third_party/fonts/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="<?php echo $res; ?>/css/styles.css?<?php echo date('Y-M-d-h-i-s'); ?>" />
 
 <?php // Internet explorer (if you give a care) ?>
   <!--[if lt IE 9]>
-    <script src="<?php echo $res; ?>/js/third_party/html5shiv/html5shiv.min.js"></script>
-    <script src="<?php echo $res; ?>/js/third_party/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="<?php echo $res; ?>/third_party/js/html5shiv/html5shiv.min.js"></script>
+    <script src="<?php echo $res; ?>/third_party/js/html5shiv/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 
 <?php /*
@@ -30,32 +31,25 @@
 ?>
 
   <?php /* noUiSlider */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/nouislider/jquery.nouislider.min.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/nouislider/jquery.nouislider.min.css" /> */ ?>
 
   <?php /* soc.js */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/socjs/soc.min.css" /> */ ?>
-
-  <?php /* Colorbox Styles  */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example1/colorbox.css" /> */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example2/colorbox.css" /> */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example3/colorbox.css" /> */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example4/colorbox.css" /> */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/colorbox/example5/colorbox.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/socjs/soc.min.css" /> */ ?>
 
   <?php /* Magnific Styles  */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/magnific/magnific-popup.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/magnific/magnific-popup.css" /> */ ?>
 
   <?php /*  Isotope  */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/isotope/isotope.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/isotope/isotope.css" /> */ ?>
 
   <?php /*  Flexslider  */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/flexslider/flexslider.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/flexslider/flexslider.css" /> */ ?>
 
   <?php /* Slick */ ?>
-  <?php /*<link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/slick/slick.css">*/ ?>
+  <?php /*<link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/slick/slick.css">*/ ?>
 
   <?php /*  Chosen  */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/js/third_party/chosen/chosen.min.css" /> */ ?>
+  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/chosen/chosen.min.css" /> */ ?>
 
 <?php /* Favicons
   use http://www.xiconeditor.com to create 64/32/24/16 versions, all in one .ico

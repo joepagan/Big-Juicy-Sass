@@ -10,10 +10,10 @@ Yup, it's using Sass with compass/bourbon, both are in, though commented out (so
 Includes:
 
 - Bourbon v3.1.8 - [http://bourbon.io/](http://bourbon.io)
-- - Neat v1.5 - [http://neat.bourbon.io/](http://neat.bourbon.io/)
+    - Neat v1.5 - [http://neat.bourbon.io/](http://neat.bourbon.io/)
 - Compass v0.12 - [https://github.com/chriseppstein/compass](https://github.com/chriseppstein/compass)
-- - Compass Animate - [https://github.com/ericam/compass-animation](https://github.com/ericam/compass-animation)
-- - Ceaser Easing - [https://github.com/jhardy/compass-ceaser-easing](https://github.com/jhardy/compass-ceaser-easing)
+    - Compass Animate - [https://github.com/ericam/compass-animation](https://github.com/ericam/compass-animation)
+    - Ceaser Easing - [https://github.com/jhardy/compass-ceaser-easing](https://github.com/jhardy/compass-ceaser-easing)
 - Hover.css - [http://ianlunn.github.io/Hover/](http://ianlunn.github.io/Hover/)
 - Effeckt.css - [https://github.com/h5bp/Effeckt.css](https://github.com/h5bp/Effeckt.css)
 - REM - [https://github.com/ry5n/rem/](https://github.com/ry5n/rem/)
@@ -24,7 +24,7 @@ Lots of plugin here:
 - jQuery 1.11.0 (CDN & local fallback)
 - jQuery UI 1.8.9 (CDN)
 - HTML5 Shiv 3.7.0 - [https://github.com/aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
-- - printshiv 3.7.0 - as above
+    - printshiv 3.7.0 - as above
 - bootstrap.js 2.1.1 - [http://getbootstrap.com/](http://getbootstrap.com/)
 - tooltipster 2.1.4 - [http://iamceege.github.io/tooltipster/](http://iamceege.github.io/tooltipster/)
 - uniform 2.1.0 - [http://uniformjs.com/](http://uniformjs.com/)

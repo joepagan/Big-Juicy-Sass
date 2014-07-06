@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // Bourbon v3.1.8 (225kb)
 // http://bourbon.io/
 // @import "bourbon/bourbon";
@@ -33,8 +34,6 @@
 // REM (5kb) - https://github.com/ry5n/rem/
 //@import "rem/rem";
 
-// Custom mixins
-@import "mixins";
 
 // Base font size set so the function below can work
 $base-font-size:16px;
@@ -44,61 +43,10 @@ $base-font-size:16px;
     @return ($px / $base) * 1em;
 }
 
-@charset "UTF-8";
+// Custom mixins
+@import "mixins";
+@import "animations";
+@import "template";
 
-// Colours
-
-$white:#fff;
-$black:#000;
-$grey:#999;
-$darkGrey:#333;
-
-// Globals
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  @include box-sizing(border-box);
-}
-
-html{
-	min-height:100%;
-	height:100%;
-}
-
-body{
-	min-height:100%;
-	background:$white;
-	@include selection($white, $darkGrey);
-	p{
-		color:$grey;
-		font-size:14px;
-		@include selection($white, $darkGrey);
-	}
-}
-
-a{
-	@include transition(.3s ease-in-out all);
-	img{
-		position:relative;
-    display: block;
-		@include transition(.3s ease-in-out all);
-		@include backface-visibility(hidden);
-	}
-	&:hover{
-		img{
-			//@include opacity(.8);
-		}
-	}
-}
-
-.clear{
-	clear:both;
-}
-
-.hidden{
-	display:none;
-}
+@import "pages/home";
+@import "pages/contact";
