@@ -9,9 +9,11 @@
 
   <title></title>
 
-  <link rel="stylesheet" href="<?php echo $res; ?>/css/normalize.css" />
-  <link rel="stylesheet" href="<?php echo $res; ?>/third_party/fonts/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="<?php echo $res; ?>/third_party/css/normalize.css" />
   <link rel="stylesheet" href="<?php echo $res; ?>/css/styles.css?<?php echo date('Y-M-d-h-i-s'); ?>" />
+
+<?php /* Font awesome */ ?>
+<?php /* <link rel="stylesheet" href="<?php echo $res; ?>/third_party/fonts/font-awesome/css/font-awesome.min.css" /> /* ?>
 
 <?php // Internet explorer (if you give a care) ?>
   <!--[if lt IE 9]>
@@ -47,9 +49,6 @@
 
   <?php /* Slick */ ?>
   <?php /*<link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/slick/slick.css">*/ ?>
-
-  <?php /*  Chosen  */ ?>
-  <?php /* <link rel="stylesheet" type="text/css" href="<?php echo $res; ?>/third_party/js/chosen/chosen.min.css" /> */ ?>
 
 <?php /* Favicons
   use http://www.xiconeditor.com to create 64/32/24/16 versions, all in one .ico
