@@ -36,6 +36,4 @@
 
 <?php /*
 <script src="<?php echo $res; ?>/js/home.js"></script>
-<script src="<?php echo $res; ?>/js/about.js"></script>
-<script src="<?php echo $res; ?>/js/contact.js"></script>
 */ ?>
