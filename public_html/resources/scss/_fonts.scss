@@ -1,0 +1,22 @@
+// Fonts
+@mixin body_font($weight:""){
+
+  font-family: 'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    //thin
+    @if $weight == "thin"{
+        font-weight:100;
+    }
+    //light
+    @else if $weight == "light"{
+        font-weight:300;
+    }
+    // normal
+    @else if $weight == ""{
+        font-weight:400;
+    }
+    // bold
+    @else if $weight == "bold"{
+        font-weight:700;
+    }
+
+}

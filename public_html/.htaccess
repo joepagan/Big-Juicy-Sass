@@ -1,3 +1,5 @@
+# password protect your test environment so google doesn't index the dev site!
+
 RewriteEngine on
 RewriteBase /
 Options +FollowSymLinks
@@ -24,10 +26,6 @@ Options +FollowSymLinks
 # Make sure URL contains primary domain and starts with www. (excluding test domain)
 # RewriteCond %{HTTP_HOST} !www.your-domain.com$ [NC]
 # RewriteRule ^(.*)$ http://www.your-domain.com/$1 [R=301,L]
-
-# Re-write requests to robots.txt on test domain to robots_dev.txt containing disallow
-#RewriteCond %{HTTP_HOST} =dev.url.com
-#RewriteRule ^robots\.txt$ /robots_dev.txt [L]
 
 # Route requests through index.php except for the following
 #RewriteCond $1 !^(favicon\.ico|robots\.txt|index\.php|themes|content|images|javascript|stylesheets|sitemap\.xml) [NC]
