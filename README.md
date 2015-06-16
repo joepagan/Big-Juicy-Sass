@@ -6,7 +6,7 @@ Just my own personal boilerplate, you don't have to use it, but it's filled with
 I find it quite useful for templating on a local environment with includes and such.
 
 ## SASS/SCSS/CSS
-Yup, it's using Sass with compass/bourbon, both are in, though commented out (so you can decide what to use)
+
 Includes:
 
 - REM - [https://github.com/ry5n/rem/](https://github.com/ry5n/rem/)
