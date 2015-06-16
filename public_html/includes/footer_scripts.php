@@ -2,7 +2,7 @@
 
 <!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/third_party/jquery/jquery-1.11.3.min.js"><\/script>')</script> <![endif]-->
 <!--[if gte IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/third_party/jquery/jquery-2.1.4.min.js"><\/script>')</script><!--<![endif]-->
-<script src="/resources/third_party/jquery-migrate/jquery-migrate-1.2.1.min.js"></script>
+<?php // <script src="/resources/third_party/jquery-migrate/jquery-migrate-1.2.1.min.js"></script> ?>
 <script src="/resources/third_party/respond/respond.min.js"></script>
 
 <?php //<!-- General scripts --> ?>
