@@ -1,0 +1,26 @@
+{
+  "name": "big-juicy-sass",
+  "version": "1",
+  "description": "boilerplate files",
+  "dependencies": {
+    "html5shiv": null,
+    "waypoints": null,
+    "gsap": null,
+    "font-awesome": null,
+    "velocity": null,
+    "photoswipe": null,
+    "magnific-popup": null,
+    "normalize": null,
+    "respond": null,
+    "slick": null,
+    "validate": null,
+    "jquery-migrate":null,
+    "sass-rem":null,
+    "jquery-legacy":"jquery#^1",
+    "jquery-modern":"jquery#2"
+  },
+  "authors": [
+    "lexbi (https://github.com/lexbi)"
+  ],
+  "license": "MIT"
+}
