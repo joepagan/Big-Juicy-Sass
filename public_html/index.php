@@ -15,28 +15,25 @@
 
 	  <title>Big Juicy SASS</title>
 
-	  <link rel="stylesheet" href="/resources/vendor/css/normalize.css">
-	  <link rel="stylesheet" href="/resources/site/css/styles.css?<?php echo date('Y-M-d-h-i-s'); ?>"> <? // remove date upon going live, timestamp added so stylesheet is never cached ?>
+	  <link rel="stylesheet" href="/resources/vendor/normalize.css/normalize.css">
+	  <link rel="stylesheet" href="/resources/site/css/styles.css">
 
 		<?php /* Font awesome */ ?>
 		<?php /* <link rel="stylesheet" href="/resources/vendor/font-awesome/css/font-awesome.min.css"> /* ?>
 
 		<?php // Internet explorer (if you give a care) ?>
 		  <!--[if lt IE 9]>
-			<script src="/resources/vendor/html5shiv/html5shiv.min.js"></script>
-			<script src="/resources/vendor/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="/resources/vendor/html5shiv/dist/html5shiv.min.js"></script>
+			<script src="/resources/vendor/html5shiv/dist/html5shiv-printshiv.min.js"></script>
 		  <![endif]-->
 
 		  <?php /* Magnific Styles  */ ?>
-		  <?php /* <link rel="stylesheet" type="text/css" href="/resources/vendor/magnific/magnific-popup.css" /> */ ?>
-
-		  <?php /*  Isotope  */ ?>
-		  <?php /* <link rel="stylesheet" type="text/css" href="/resources/vendor/isotope/isotope.css" /> */ ?>
+		  <?php /* <link rel="stylesheet" type="text/css" href="/resources/vendor/magnific-popup/dist/magnific-popup.css" /> */ ?>
 
 		  <?php /* Slick */ ?>
 		  <?php /*
-				<link rel="stylesheet" type="text/css" href="/resources/vendor/slick/slick.css">
-				<link rel="stylesheet" type="text/css" href="/resources/vendor/slick/slick-theme.css">
+				<link rel="stylesheet" type="text/css" href="/resources/vendor/slick-carousel/slick/slick.css">
+				<link rel="stylesheet" type="text/css" href="/resources/vendor/lick-carousel/slick/slick-theme.css">
 			*/ ?>
 
 		<?php /* Favicons http://realfavicongenerator.net/ ?>
@@ -72,19 +69,18 @@
 
 		<script src="/resources/vendor/modernizr/modernizr.js"></script>
 
-		<!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery/jquery-1.11.3.min.js"><\/script>')</script> <![endif]-->
-		<!--[if gte IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery/jquery-2.1.4.min.js"><\/script>')</script><!--<![endif]-->
+		<!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-legacy/dist/jquery.min.js"><\/script>')</script> <![endif]-->
+		<!--[if gte IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-modern/dist/jquery.min.js"><\/script>')</script><!--<![endif]-->
 		<?php // <script src="/resources/vendor/jquery-migrate/jquery-migrate-1.2.1.min.js"></script> ?>
-		<script src="/resources/vendor/respond/respond.min.js"></script>
+		<script src="/resources/vendor/respond/dest/respond.min.js"></script>
 
 		<?php //<!-- General scripts --> ?>
 		<?php /*<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>*/ ?>
 		<?php /*<script src="/resources/vendor/datejs/date.js"></script> */ ?>
-		<?php /*<script src="/resources/vendor/columnizer/jquery.columnizer.js"></script> */ ?>
-		<?php /*<script src="/resources/vendor/waypoints/jquery.waypoints.min.js"></script> */ ?>
+		<?php /*<script src="/resources/vendor/waypoints/lib/jquery.waypoints.min.js"></script> */ ?>
 		<?php // <script src="/resources/vendor/validate/jquery.validate.min.js"></script> ?>
-		<?php // <script src="/resources/vendor/slick/slick.min.js"></script> ?>
-		<?php // <script src="/resources/vendor/placeholder/placeholders.min.js"></script> ?>
+		<?php // <script src="/resources/vendor/slick-carousel/slick/slick.min.js"></script> ?>
+		<?php // <script src="/resources/vendor/placeholders/placeholders.min.js"></script> ?>
 
 		<?php // animation libraries ?>
 
@@ -94,20 +90,17 @@
 		*/ ?>
 
 		<?php /* GSAP
-		  <script src="/resources/vendor/gsap/jquery.gsap.min.js"></script>
-		  <script src="/resources/vendor/gsap/plugins/CSSPlugin.min.js"></script>
-		  <script src="/resources/vendor/gsap/easing/EasePack.min.js"></script>
-		  <script src="/resources/vendor/gsap/TimelineLite.min.js"></script>
-		  <script src="/resources/vendor/gsap/TimelineMax.min.js"></script>
-		  <script src="/resources/vendor/gsap/TweenLite.min.js"></script>
-		  <script src="/resources/vendor/gsap/TweenMax.min.js"></script>
+		  <script src="/resources/vendor/gsap/src/minified/jquery.gsap.min.js"></script>
+		  <script src="/resources/vendor/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
+		  <script src="/resources/vendor/gsap/src/minified/easing/EasePack.min.js"></script>
+		  <script src="/resources/vendor/gsap/src/minified/TimelineLite.min.js"></script>
+		  <script src="/resources/vendor/gsap/src/minified/TimelineMax.min.js"></script>
+		  <script src="/resources/vendor/gsap/src/minified/TweenLite.min.js"></script>
+		  <script src="/resources/vendor/gsap/src/minified/TweenMax.min.js"></script>
 		*/ ?>
 
 		<?php /* Lightboxes  */ ?>
-		<?php /*<script src="/resources/vendor/magnific/jquery.magnific-popup.min.js"></script> */ ?>
-
-		<?php /* Isotope - You'll have to pay for a license to use this */ ?>
-		<?php /*<script src="/resources/vendor/isotope/jquery.isotope.min.js"></script> */ ?>
+		<?php /*<script src="/resources/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script> */ ?>
 
 		<?php /* If you want to add any others to your project easy just duplicate the line below */ ?>
 		<?php /*<script src="/resources/vendor/"></script> */ ?>
