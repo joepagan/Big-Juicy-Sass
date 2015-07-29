@@ -5,6 +5,8 @@ Just my own personal boilerplate, you don't have to use it, but it's filled with
 
 I find it quite useful for templating on a local environment with includes and such.
 
+Some of the resources here are no longer in the repo, you will need to "CD" into the top-level directory, then use "bower install" in cmd line. Some resources are not available in bower, so I will keep them here (datejs, placeholders.js, modernizr).
+
 ## SASS/SCSS/CSS
 
 Includes:
@@ -30,10 +32,9 @@ Lots of plugin here:
     - TweenLite
     - TweenMax
     - EasePack
-- Columnizer 1.6 - [https://github.com/adamwulf/Columnizer-jQuery-Plugin](https://github.com/adamwulf/Columnizer-jQuery-Plugin)
 - Placeholder 4.0.1 - [http://jamesallardice.github.io/Placeholders.js/](http://jamesallardice.github.io/Placeholders.js/)
-- Isotope 1.5.25 (Do not use without a license!) - [https://github.com/desandro/isotope](https://github.com/desandro/isotope)
-- Magnific 1 - [https://github.com/dimsemenov/magnific-popup/](https://github.com/dimsemenov/magnific-popup/)
+- Magnific - [https://github.com/dimsemenov/magnific-popup/](https://github.com/dimsemenov/magnific-popup/)
+- Photoswipe
 - Slick - [http://kenwheeler.github.io/slick/](http://kenwheeler.github.io/slick/)
 - jQuery Validate 1.13.1 - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
 - Waypoints 3.1.1 - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
