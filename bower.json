@@ -3,7 +3,6 @@
   "version": "1",
   "description": "boilerplate files",
   "dependencies": {
-    "html5shiv": null,
     "waypoints": null,
     "gsap": null,
     "font-awesome": null,
@@ -13,7 +12,7 @@
     "normalize.css": null,
     "respond": null,
     "slick-carousel": null,
-    "validate": null,
+    "jquery-validate": null,
     "jquery-migrate":null,
     "sass-rem":null,
     "jquery-legacy":"jquery#^1",

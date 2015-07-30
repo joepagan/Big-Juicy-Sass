@@ -21,12 +21,6 @@
 		<?php /* Font awesome */ ?>
 		<?php /* <link rel="stylesheet" href="/resources/vendor/font-awesome/css/font-awesome.min.css"> /* ?>
 
-		<?php // Internet explorer (if you give a care) ?>
-		  <!--[if lt IE 9]>
-			<script src="/resources/vendor/html5shiv/dist/html5shiv.min.js"></script>
-			<script src="/resources/vendor/html5shiv/dist/html5shiv-printshiv.min.js"></script>
-		  <![endif]-->
-
 		  <?php /* Magnific Styles  */ ?>
 		  <?php /* <link rel="stylesheet" type="text/css" href="/resources/vendor/magnific-popup/dist/magnific-popup.css" /> */ ?>
 
