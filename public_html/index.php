@@ -8,33 +8,41 @@
 
 	<head>
 
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	  <title>Big Juicy SASS</title>
+		<title>Big Juicy SASS</title>
 
-	  <link rel="stylesheet" href="/resources/vendor/normalize.css/normalize.css">
-	  <link rel="stylesheet" href="/resources/site/css/styles.css">
+		<link rel="stylesheet" href="/resources/vendor/normalize.css/normalize.css">
+		<link rel="stylesheet" href="/resources/site/css/styles.css">
 
 		<?php /* Font awesome */ ?>
-		<?php /* <link rel="stylesheet" href="/resources/vendor/font-awesome/css/font-awesome.min.css"> /* ?>
+		<?php /* <link rel="stylesheet" href="/resources/vendor/font-awesome/css/font-awesome.min.css"> */ ?>
 
-		  <?php /* Magnific Styles  */ ?>
-		  <?php /* <link rel="stylesheet" type="text/css" href="/resources/vendor/magnific-popup/dist/magnific-popup.css" /> */ ?>
+		<?php /* html5shiv */ ?>
+		<!--[if lt IE 9]>
+			<script src="/resources/vendor/html5shiv/dist/html5shiv.min.js"></script>
+			<script src="/resources/vendor/html5shiv/dist/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
 
-		  <?php /* Slick */ ?>
-		  <?php /*
-				<link rel="stylesheet" type="text/css" href="/resources/vendor/slick-carousel/slick/slick.css">
-				<link rel="stylesheet" type="text/css" href="/resources/vendor/lick-carousel/slick/slick-theme.css">
-			*/ ?>
+	  	<?php /* Magnific Styles  */ ?>
+	  	<?php /* <link rel="stylesheet" type="text/css" href="/resources/vendor/magnific-popup/dist/magnific-popup.css" /> */ ?>
 
-		<?php /* Favicons http://realfavicongenerator.net/ ?>
-		  use both these too
+	  	<?php /* Slick */ ?>
+	  	<?php
+			/*
+			<link rel="stylesheet" type="text/css" href="/resources/vendor/slick-carousel/slick/slick.css">
+			<link rel="stylesheet" type="text/css" href="/resources/vendor/lick-carousel/slick/slick-theme.css">
+			*/
+		?>
+
+		<?php /* Favicons http://realfavicongenerator.net/
+		  	use both these too
 			<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-		  */
+		  	*/
 		?>
 
 		<?php // Open graph protocol
@@ -48,13 +56,13 @@
 		  */
 		?>
 		<?php // Twitter Cards
-		  /*
-			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:url" content="http://www.<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']; ?>" />
-			<meta name="twitter:title" content="" />
-			<meta name="twitter:description" content="" />
-			<meta name="twitter:image" content="" />
-		  */
+			/*
+				<meta name="twitter:card" content="summary" />
+				<meta name="twitter:url" content="http://www.<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']; ?>" />
+				<meta name="twitter:title" content="" />
+				<meta name="twitter:description" content="" />
+				<meta name="twitter:image" content="" />
+			*/
 		?>
 	</head>
 

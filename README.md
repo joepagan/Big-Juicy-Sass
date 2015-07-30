@@ -30,17 +30,18 @@ Lots of plugin here:
     - TimelineMax
     - TweenLite
     - TweenMax
-    - EasePack  
+    - EasePack
 - Magnific Popup (bower) - [https://github.com/dimsemenov/magnific-popup/](https://github.com/dimsemenov/magnific-popup/)
 - Photoswipe (bower)
 - Slick Carousel (bower) - [http://kenwheeler.github.io/slick/](http://kenwheeler.github.io/slick/)
 - jQuery Validate (bower) - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
 - Waypoints.js (bower) - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
+- html5shiv (bower) - [https://github.com/afarkas/html5shiv](https://github.com/afarkas/html5shiv)
 ###Bower
 These resources are either not available in bower OR, in the case of modernizr, it's more specific to my own projects
 - Placeholder.js 4.0.1 - [http://jamesallardice.github.io/Placeholders.js/](http://jamesallardice.github.io/Placeholders.js/)
 - date.js 1.0 - [http://www.datejs.com/](http://www.datejs.com/)
-- Modernizr.js - 2.8.3 - [http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-printshiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load](http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-printshiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load)
+- Modernizr.js - 2.8.3 - [http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load](http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load)
     - css 2d transform
     - css 3d transforms
     - css transitions
@@ -52,4 +53,3 @@ These resources are either not available in bower OR, in the case of modernizr, 
     - touch events
     - modernizr.load
     - add css classes
-    - html5shiv w/ printshiv

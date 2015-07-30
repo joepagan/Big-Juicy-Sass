@@ -5,6 +5,7 @@
   "dependencies": {
     "waypoints": null,
     "gsap": null,
+    "html5shiv": null,
     "font-awesome": null,
     "velocity": null,
     "photoswipe": null,
