@@ -18,24 +18,25 @@ Includes:
 ## JS/jQuery
 Lots of plugin here:
 
-- jQuery 1.11.3 (CDN & local fallback)
-- jQuery 2.1.4 (CDN & local fallback)
-- jQuery Migrate 1.2.1 - [https://github.com/jquery/jquery-migrate/](https://github.com/jquery/jquery-migrate/)
-- Respond JS 1.4.2 - [https://github.com/scottjehl/Respond](https://github.com/scottjehl/Respond)
-- HTML5 Shiv 3.7.0 - [https://github.com/aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
-    - printshiv 3.7.0 - as above
-- Velocity 1.2.2 - [http://julian.com/research/velocity/](http://julian.com/research/velocity/)
-- GSAP 1.17 - [http://greensock.com/gsap](http://greensock.com/gsap)
+- jQuery 1.11.3 (CDN & local fallback (bower))
+- jQuery 2.1.4 (CDN & local fallback (bower))
+- jQuery Migrate (bower) - [https://github.com/jquery/jquery-migrate/](https://github.com/jquery/jquery-migrate/)
+- Respond JS (bower) - [https://github.com/scottjehl/Respond](https://github.com/scottjehl/Respond)
+- HTML5 Shiv (bower) - [https://github.com/aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
+    - printshiv - as above
+- Velocity (bower) - [http://julian.com/research/velocity/](http://julian.com/research/velocity/)
+- GSAP (bower) - [http://greensock.com/gsap](http://greensock.com/gsap)
     - jQuery GSAP
     - TimelineLite
     - TimelineMax
     - TweenLite
     - TweenMax
     - EasePack
-- Placeholder 4.0.1 - [http://jamesallardice.github.io/Placeholders.js/](http://jamesallardice.github.io/Placeholders.js/)
-- Magnific - [https://github.com/dimsemenov/magnific-popup/](https://github.com/dimsemenov/magnific-popup/)
-- Photoswipe
-- Slick - [http://kenwheeler.github.io/slick/](http://kenwheeler.github.io/slick/)
-- jQuery Validate 1.13.1 - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
-- Waypoints 3.1.1 - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
+- Magnific Popup (bower) - [https://github.com/dimsemenov/magnific-popup/](https://github.com/dimsemenov/magnific-popup/)
+- Photoswipe (bower)
+- Slick Carousel (bower) - [http://kenwheeler.github.io/slick/](http://kenwheeler.github.io/slick/)
+- jQuery Validate (bower) - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
+- Waypoints.js (bower) - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
+- Placeholder.js 4.0.1 - [http://jamesallardice.github.io/Placeholders.js/](http://jamesallardice.github.io/Placeholders.js/)
 - date.js 1.0 - [http://www.datejs.com/](http://www.datejs.com/)
+- Modernizr.js - 2.8.3 - [http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load](http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load)
