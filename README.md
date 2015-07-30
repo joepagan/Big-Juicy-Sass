@@ -37,7 +37,7 @@ Lots of plugin here:
 - jQuery Validate (bower) - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
 - Waypoints.js (bower) - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
 - html5shiv (bower) - [https://github.com/afarkas/html5shiv](https://github.com/afarkas/html5shiv)
-###Bower
+### Non Bower resources
 These resources are either not available in bower OR, in the case of modernizr, it's more specific to my own projects
 - Placeholder.js 4.0.1 - [http://jamesallardice.github.io/Placeholders.js/](http://jamesallardice.github.io/Placeholders.js/)
 - date.js 1.0 - [http://www.datejs.com/](http://www.datejs.com/)
