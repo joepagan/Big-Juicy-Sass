@@ -72,7 +72,7 @@
 		<?php /*<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>*/ ?>
 		<?php /*<script src="/resources/vendor/datejs/date.js"></script> */ ?>
 		<?php /*<script src="/resources/vendor/waypoints/lib/jquery.waypoints.min.js"></script> */ ?>
-		<?php // <script src="/resources/vendor/validate/jquery.validate.min.js"></script> ?>
+		<?php // <script src="/resources/vendor/jquery-validate/dist/jquery.validate.min.js"></script> ?>
 		<?php // <script src="/resources/vendor/slick-carousel/slick/slick.min.js"></script> ?>
 		<?php // <script src="/resources/vendor/placeholders/placeholders.min.js"></script> ?>
 
