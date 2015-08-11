@@ -12,6 +12,12 @@ html{
 
 html,body{
 	margin:0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	button,
+	input{
+		-webkit-font-smoothing: antialiased;
+	}
 }
 .hidden{
 	display: none;
