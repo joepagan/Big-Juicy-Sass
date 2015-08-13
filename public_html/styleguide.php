@@ -6,7 +6,65 @@
 <!--[if IE 9]><html lang="en" class="no-js ie9"><![endif]-->
 <!--[if gt IE 9]><!--><html lang="en" class="no-js"><!--<![endif]-->
 
-	<?php include('includes/head.php'); ?>
+	<head>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Big Juicy SASS</title>
+
+		<link rel="stylesheet" href="/resources/vendor/normalize.css/normalize.css">
+		<link rel="stylesheet" href="/resources/site/css/styles.css">
+
+		<?php /* Font awesome */ ?>
+		<?php /* <link rel="stylesheet" href="/resources/vendor/font-awesome/css/font-awesome.min.css"> */ ?>
+
+		<?php /* html5shiv */ ?>
+		<!--[if lt IE 9]>
+			<script src="/resources/vendor/html5shiv/dist/html5shiv.min.js"></script>
+			<script src="/resources/vendor/html5shiv/dist/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
+
+	  	<?php /* Magnific Styles  */ ?>
+	  	<?php /* <link rel="stylesheet" type="text/css" href="/resources/vendor/magnific-popup/dist/magnific-popup.css" /> */ ?>
+
+	  	<?php /* Slick */ ?>
+	  	<?php
+			/*
+			<link rel="stylesheet" type="text/css" href="/resources/vendor/slick-carousel/slick/slick.css">
+			<link rel="stylesheet" type="text/css" href="/resources/vendor/slick-carousel/slick/slick-theme.css">
+			*/
+		?>
+
+		<?php /* Favicons http://realfavicongenerator.net/
+		  	use both these too
+			<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		  	*/
+		?>
+
+		<?php // Open graph protocol
+		  /*
+			<meta property="og:title" content="">
+			<meta property="og:description" content="">
+			<meta property="og:image" content="">
+			<meta property="og:type" content="website">
+			<meta property="og:site_name" content="">
+			<meta property="og:url" content="http://www.<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']; ?>">
+		  */
+		?>
+		<?php // Twitter Cards
+			/*
+				<meta name="twitter:card" content="summary">
+				<meta name="twitter:url" content="http://www.<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']; ?>">
+				<meta name="twitter:title" content="">
+				<meta name="twitter:description" content="">
+				<meta name="twitter:image" content="">
+			*/
+		?>
+	</head>
 
   <body>
 
@@ -176,28 +234,28 @@
 				<label class="style">DIB Image List</label>
 		        <ul class="dib-images">
 					<li>
-						<img src="http://lorempixel.com/100/200/animals/" alt="">
+						<img src="https://unsplash.it/100/200" alt="">
 					</li>
 					<li>
-						<img src="http://lorempixel.com/300/200/animals/" alt="">
+						<img src="https://unsplash.it/300/200" alt="">
 					</li>
 					<li>
-						<img src="http://lorempixel.com/400/200/animals/" alt="">
+						<img src="https://unsplash.it/400/200" alt="">
 					</li>
 					<li>
-						<img src="http://lorempixel.com/250/200/animals/" alt="">
+						<img src="https://unsplash.it/250/200" alt="">
 					</li>
 					<li>
-						<img src="http://lorempixel.com/432/200/animals/" alt="">
+						<img src="https://unsplash.it/423/200" alt="">
 					</li>
 					<li>
-						<img src="http://lorempixel.com/123/200/animals/" alt="">
+						<img src="https://unsplash.it/123/200" alt="">
 					</li>
 					<li>
-						<img src="http://lorempixel.com/291/200/animals/" alt="">
+						<img src="https://unsplash.it/291/200" alt="">
 					</li>
 					<li>
-						<img src="http://lorempixel.com/723/200/animals/" alt="">
+						<img src="https://unsplash.it/700/200" alt="">
 					</li>
 
 		        </ul>
@@ -258,33 +316,18 @@
 				<br>
 				<br>
 
-		        <div class="thumb-slider">
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/" alt="" class="thumb-img" />
+		        <div class="slick-slider">
+					<div>
+		              <img src="https://unsplash.it/200?image=200" alt="" class="thumb-img" />
 		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/1/" alt="" class="thumb-img" />
+					<div>
+		              <img src="https://unsplash.it/200?image=34" alt="" class="thumb-img" />
 		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/2" alt="" class="thumb-img" />
+					<div>
+		              <img src="https://unsplash.it/200?image=19" alt="" class="thumb-img" />
 		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/" alt="" class="thumb-img" />
-		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/1/" alt="" class="thumb-img" />
-		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/2" alt="" class="thumb-img" />
-		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/" alt="" class="thumb-img" />
-		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/1/" alt="" class="thumb-img" />
-		            </div>
-		            <div>
-		              <img src="http://lorempixel.com/200/200/animals/2" alt="" class="thumb-img" />
+					<div>
+		              <img src="https://unsplash.it/200?image=10" alt="" class="thumb-img" />
 		            </div>
 
 		        </div>
@@ -295,36 +338,6 @@
 
 				<br>
 				<br>
-
-		        <form action="" class="green form">
-		            <div class="field">
-		                <label for="">Text input</label>
-		                <input type="text" value="value">
-		            </div>
-
-		            <div class="field">
-		                <label for="">Placeholder example</label>
-		                <input type="text" placeholder="Placeholder">
-		            </div>
-
-		            <div class="field">
-		                <label for="">Number input</label>
-		                <input type="number" value="1">
-		            </div>
-
-		            <div class="field">
-		                <label for="">Email input</label>
-		                <input type="email" placeholder="email@email.com">
-		            </div>
-
-		            <div class="field textarea">
-		                <label for="">Textarea</label>
-		                <textarea name="" id="" cols="30" rows="10"></textarea>
-		            </div>
-
-		            <button type="submit">Send Message</button>
-
-		        </form>
 
 				<form action="" class="form">
 		            <div class="field">
@@ -376,7 +389,7 @@
 		<br>
 		<div class="fw bnrs">
 			<section class="bnr">
-				<img src="http://lorempixel.com/1920/800/" alt="" class="bnr-image">
+				<img src="https://unsplash.it/1920/800" alt="" class="bnr-image">
 				<div class="text">
 					<h2>Header 2</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam reprehenderit vero explicabo architecto non eveniet blanditiis, provident laboriosam! Obcaecati, eum?</p>
@@ -384,7 +397,7 @@
 				</div>
 			</section>
 			<section class="bnr">
-				<img src="http://lorempixel.com/1920/800/" alt="" class="bnr-image">
+				<img src="https://unsplash.it/1920/800" alt="" class="bnr-image">
 				<div class="text">
 					<h2>Header 2</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam reprehenderit vero explicabo architecto non eveniet blanditiis, provident laboriosam! Obcaecati, eum?</p>
@@ -394,7 +407,46 @@
 		</div>
 	</div>
 
-    <?php include('includes/footer_scripts.php'); ?>
+	<script src="/resources/vendor/modernizr/modernizr.js"></script>
 
-  </body>
+	<!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-legacy/dist/jquery.min.js"><\/script>')</script> <![endif]-->
+	<!--[if gte IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-modern/dist/jquery.min.js"><\/script>')</script><!--<![endif]-->
+	<?php // <script src="/resources/vendor/jquery-migrate/jquery-migrate-1.2.1.min.js"></script> ?>
+	<script src="/resources/vendor/respond/dest/respond.min.js"></script>
+
+	<?php //<!-- General scripts --> ?>
+	<?php /*<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>*/ ?>
+	<?php /*<script src="/resources/vendor/datejs/date.js"></script> */ ?>
+	<?php /*<script src="/resources/vendor/waypoints/lib/jquery.waypoints.min.js"></script> */ ?>
+	<?php // <script src="/resources/vendor/jquery-validate/dist/jquery.validate.min.js"></script> ?>
+	<?php // <script src="/resources/vendor/slick-carousel/slick/slick.min.js"></script> ?>
+	<?php // <script src="/resources/vendor/placeholders/placeholders.min.js"></script> ?>
+
+	<?php // animation libraries ?>
+
+	<?php /* Velocity
+	  <script src="/resources/vendor/velocity/velocity.min.js"></script>
+	  <script src="/resources/vendor/velocity/velocity.ui.min.js"></script>
+	*/ ?>
+
+	<?php /* GSAP
+	  <script src="/resources/vendor/gsap/src/minified/jquery.gsap.min.js"></script>
+	  <script src="/resources/vendor/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
+	  <script src="/resources/vendor/gsap/src/minified/easing/EasePack.min.js"></script>
+	  <script src="/resources/vendor/gsap/src/minified/TimelineLite.min.js"></script>
+	  <script src="/resources/vendor/gsap/src/minified/TimelineMax.min.js"></script>
+	  <script src="/resources/vendor/gsap/src/minified/TweenLite.min.js"></script>
+	  <script src="/resources/vendor/gsap/src/minified/TweenMax.min.js"></script>
+	*/ ?>
+
+	<?php /* Lightboxes  */ ?>
+	<?php /*<script src="/resources/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script> */ ?>
+
+	<?php /* If you want to add any others to your project easy just duplicate the line below */ ?>
+	<?php /*<script src="/resources/vendor/"></script> */ ?>
+	<?php /*<script src="/resources/site/js/"></script> */ ?>
+
+	<script src="/resources/site/js/global.min.js"></script>
+
+</body>
 </html>

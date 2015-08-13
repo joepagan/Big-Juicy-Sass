@@ -45,25 +45,19 @@
 		  	*/
 		?>
 
-		<?php // Open graph protocol
-		  /*
-			<meta property="og:title" content="" />
-			<meta property="og:description" content="" />
-			<meta property="og:image" content="" />
-			<meta property="og:type" content="website" />
-			<meta property="og:site_name" content="" />
-			<meta property="og:url" content="http://www.<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']; ?>" />
-		  */
-		?>
-		<?php // Twitter Cards
-			/*
-				<meta name="twitter:card" content="summary" />
-				<meta name="twitter:url" content="http://www.<?php echo $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']; ?>" />
-				<meta name="twitter:title" content="" />
-				<meta name="twitter:description" content="" />
-				<meta name="twitter:image" content="" />
-			*/
-		?>
+			<meta property="og:title" content="">
+			<meta property="og:description" content="">
+			<meta property="og:image" content="">
+			<meta property="og:type" content="website">
+			<meta property="og:site_name" content="">
+			<meta property="og:url" content="">
+
+			<meta name="twitter:card" content="summary">
+			<meta name="twitter:url" content="">
+			<meta name="twitter:title" content="">
+			<meta name="twitter:description" content="">
+			<meta name="twitter:image" content="">
+			
 	</head>
 
 
