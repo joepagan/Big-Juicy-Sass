@@ -15,9 +15,9 @@ Some resources are not available in bower, so I will try keep them as up to date
 
 Includes:
 
-- REM - [https://github.com/ry5n/rem/](https://github.com/ry5n/rem/)
-- Normalise 3.0.2 - [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/)
-- Font Awesome 4.3.0 - [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
+- SASS REM (bower) - [https://github.com/ry5n/rem/](https://github.com/ry5n/rem/)
+- Normalise (bower) - [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/)
+- Font Awesome (bower) - [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
 
 ## JS/jQuery
 Lots of plugin here:
