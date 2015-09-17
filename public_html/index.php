@@ -57,7 +57,7 @@
 			<meta name="twitter:title" content="">
 			<meta name="twitter:description" content="">
 			<meta name="twitter:image" content="">
-			
+
 	</head>
 
 
@@ -70,10 +70,10 @@
 		<?php // <script src="/resources/vendor/jquery-migrate/jquery-migrate-1.2.1.min.js"></script> ?>
 		<script src="/resources/vendor/respond/dest/respond.min.js"></script>
 
-		<?php //<!-- General scripts --> ?>
-		<?php /*<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>*/ ?>
-		<?php /*<script src="/resources/vendor/datejs/date.js"></script> */ ?>
-		<?php /*<script src="/resources/vendor/waypoints/lib/jquery.waypoints.min.js"></script> */ ?>
+		<?php // General scripts ?>
+		<?php // <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script> ?>
+		<?php // <script src="/resources/vendor/moment/min/moment.min.js"></script> ?>
+		<?php // <script src="/resources/vendor/waypoints/lib/jquery.waypoints.min.js"></script> ?>
 		<?php // <script src="/resources/vendor/jquery-validate/dist/jquery.validate.min.js"></script> ?>
 		<?php // <script src="/resources/vendor/slick-carousel/slick/slick.min.js"></script> ?>
 		<?php // <script src="/resources/vendor/placeholders/placeholders.min.js"></script> ?>
@@ -95,12 +95,12 @@
 		  <script src="/resources/vendor/gsap/src/minified/TweenMax.min.js"></script>
 		*/ ?>
 
-		<?php /* Lightboxes  */ ?>
-		<?php /*<script src="/resources/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script> */ ?>
+		<?php // Lightboxes ?>
+		<?php // <script src="/resources/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script> ?>
 
 		<?php /* If you want to add any others to your project easy just duplicate the line below */ ?>
-		<?php /*<script src="/resources/vendor/"></script> */ ?>
-		<?php /*<script src="/resources/site/js/"></script> */ ?>
+		<?php // <script src="/resources/vendor/"></script> ?>
+		<?php // <script src="/resources/site/js/"></script> ?>
 
 		<script src="/resources/site/js/global.min.js"></script>
 

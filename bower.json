@@ -1,23 +1,25 @@
 {
   "name": "big-juicy-sass",
-  "version": "1",
+  "version": "1.01",
   "description": "boilerplate files",
   "dependencies": {
-    "waypoints": null,
+    "font-awesome": null,
     "gsap": null,
     "html5shiv": null,
-    "font-awesome": null,
-    "velocity": null,
-    "photoswipe": null,
-    "magnific-popup": null,
-    "normalize.css": null,
-    "respond": null,
-    "slick-carousel": null,
     "jquery-validate": null,
     "jquery-migrate":null,
-    "sass-rem":null,
     "jquery-legacy":"jquery#^1",
-    "jquery-modern":"jquery#2"
+    "jquery-modern":"jquery#2",
+    "magnific-popup": null,
+    "matchHeight": null,
+    "moment": null,
+    "normalize.css": null,
+    "photoswipe": null,
+    "respond": null,
+    "slick-carousel": null,
+    "sass-rem":null,
+    "velocity": null,
+    "waypoints": null
   },
   "authors": [
     "lexbi (https://github.com/lexbi)"
