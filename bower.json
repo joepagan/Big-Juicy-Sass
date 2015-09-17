@@ -12,6 +12,7 @@
     "jquery-modern":"jquery#2",
     "magnific-popup": null,
     "matchHeight": null,
+    "modernizr": null,
     "moment": null,
     "normalize.css": null,
     "photoswipe": null,

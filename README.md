@@ -9,7 +9,7 @@ I have now added all the bower resources into the repo, as it gives you access t
 
 If you do want the absolute latest versions of the resources "CD" into the top-level directory (where bower.json lives) then use "bower install" in cmd line.
 
-Some resources are not available in bower, so I will try keep them as up to date as I can in here here (placeholders.js, modernizr (my preferred stripped down version of modernizr)).
+Some resources are not available in bower, so I will try keep them as up to date as I can in here here (placeholders.js & my preferred stripped down version of modernizr).
 
 ## SASS/SCSS/CSS
 
@@ -34,7 +34,8 @@ Lots of plugin here:
     - TweenLite
     - TweenMax
     - EasePack
-- Moment.js - 2.10.6 [http://momentjs.com](http://momentjs.com)
+- Modernizr.js - (bower) [https://modernizr.com/](https://modernizr.com/)
+- Moment.js - (bower) [http://momentjs.com](http://momentjs.com)
 - Magnific Popup (bower) - [https://github.com/dimsemenov/magnific-popup](https://github.com/dimsemenov/magnific-popup)
 - Photoswipe (bower)
 - Slick Carousel (bower) - [http://kenwheeler.github.io/slick/](http://kenwheeler.github.io/slick)
@@ -46,7 +47,7 @@ Lots of plugin here:
 These resources are either not available in bower OR, in the case of modernizr, it's more specific to my own projects
 
 - Placeholder.js 4.0.1 - [http://jamesallardice.github.io/Placeholders.js/](http://jamesallardice.github.io/Placeholders.js/))
-- Modernizr.js - 2.8.3 - [http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load](http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load)
+- Modernizr.js stripped down - 2.8.3 - [http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load](http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load)
     - css 2d transform
     - css 3d transforms
     - css transitions
