@@ -5,8 +5,11 @@ Just my own personal boilerplate, you don't have to use it, but it's filled with
 
 I find it quite useful for templating on a local environment with includes and such.
 
+I have now added all the bower resources into the repo, as it gives you access to the resources straight away...
 
-Some of the resources here are no longer in the repo, you will need to "CD" into the top-level directory, then use "bower install" in cmd line. Some resources are not available in bower, so I will keep them here (datejs, placeholders.js, modernizr).
+If you do want the absolute latest versions of the resources "CD" into the top-level directory (where bower.json lives) then use "bower install" in cmd line.
+
+Some resources are not available in bower, so I will try keep them as up to date as I can in here here (placeholders.js, modernizr (my preferred stripped down version of modernizr)).
 
 ## SASS/SCSS/CSS
 
