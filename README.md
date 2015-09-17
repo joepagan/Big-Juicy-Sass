@@ -38,8 +38,10 @@ Lots of plugin here:
 - jQuery Validate (bower) - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
 - Waypoints.js (bower) - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
 - html5shiv (bower) - [https://github.com/afarkas/html5shiv](https://github.com/afarkas/html5shiv)
+
 ### Non Bower resources
 These resources are either not available in bower OR, in the case of modernizr, it's more specific to my own projects
+
 - Placeholder.js 4.0.1 - [http://jamesallardice.github.io/Placeholders.js/](http://jamesallardice.github.io/Placeholders.js/))
 - Modernizr.js - 2.8.3 - [http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load](http://modernizr.com/download/#-csstransforms-csstransforms3d-csstransitions-canvas-video-inputtypes-inlinesvg-svg-touch-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load)
     - css 2d transform
