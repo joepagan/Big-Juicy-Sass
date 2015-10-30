@@ -3,6 +3,7 @@
   "version": "1.01",
   "description": "boilerplate files",
   "dependencies": {
+    "clipboard": null,
     "font-awesome": null,
     "gsap": null,
     "html5shiv": null,
