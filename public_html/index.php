@@ -34,7 +34,7 @@
 	  	<?php
 			/*
 			<link rel="stylesheet" type="text/css" href="/resources/vendor/slick-carousel/slick/slick.css">
-			<link rel="stylesheet" type="text/css" href="/resources/vendor/lick-carousel/slick/slick-theme.css">
+			<link rel="stylesheet" type="text/css" href="/resources/vendor/slick-carousel/slick/slick-theme.css">
 			*/
 		?>
 

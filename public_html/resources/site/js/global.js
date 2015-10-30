@@ -13,7 +13,7 @@
  	   y = i[j].src;
  	   // If filenames ends with SVG
       if(y.indexOf("?") > -1){
-        y = y.split("?")[0];
+        y = y.split("?")[0]; // removes query strings from images
       }
  	   if( y.match(/svg$/) ){
 
