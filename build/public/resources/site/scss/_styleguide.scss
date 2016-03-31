@@ -1,0 +1,9 @@
+body.styleguide{
+    label.style{
+        @include rem(font-size, 20px);
+        @include rem(padding, 20px);
+        display: inline-block;
+        color:$c_White;
+        background:$c_Black;
+    }
+}

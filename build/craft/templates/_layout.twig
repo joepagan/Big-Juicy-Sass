@@ -1,0 +1,45 @@
+{% spaceless %}
+    {# html open #}
+    {% include "_includes/html_open" %}
+
+        {# head open #}
+        {% include "_includes/head_open" %}
+            {% include "_includes/head_meta" %}
+            {% include "_includes/head_styles" %}
+            {% include "_includes/head_scripts" %}
+            {% block preHeadClose %}{% endblock %}
+        {% include "_includes/head_close" %}
+        {# head close #}
+
+        {# body open #}
+        {% include "_includes/body_open" %}
+
+            <div class="page_wrapper">
+
+                <header id="header">
+                    {% include "_includes/header" %}
+                </header>
+
+                <main id="main">
+                    {% block content %}{% endblock %}
+                </main>
+
+				<footer id="footer">
+            	       {% include "_includes/footer" %}
+				</footer>
+
+          </div>
+
+          {% include "_includes/mobile_nav" %}
+
+          {% include "_includes/body_styles" %}
+          {% include "_includes/body_scripts" %}
+          {% block preBodyClose %}{% endblock %}
+
+        {% include "_includes/body_close" %}
+        {# body close #}
+
+    {% include "_includes/html_close" %}
+    {# html close #}
+
+{% endspaceless %}

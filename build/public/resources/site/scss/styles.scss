@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+$base-font-size: 16px !default;
+@import "../../vendor/sass-rem/rem";
+
+// These styles will be loaded in with JS from the footer, init.scss gets loaded first in the head
+// This file needs to contain all the styles for the websites that are not included in init.scss
+
+// These imports are not actual styles, just variables & mixins
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "colours";
+
+// globally used styles
+// @import "globals"; - loaded in init.scss
+// @import "grid"; - loaded in init.scss
+// @import "styleguide"; - loaded in init.scss
+// @import "template"; - loaded in init.scss
+// @import "forms";
+
+// includes
+// @import "includes/_header"; - loaded in init.scss
+// @import "includes/_main_nav"; - loaded in init.scss
+// @import "includes/_mobile_nav"; - loaded in init.scss
+@import "includes/_footer";
+
+//partials
+//@import "partials/_banners";
+
+//extend plugins
+//@import "extend_plugins/_magnific";
+
+// IE
+//@import "ie9";
+//@import "ie8";
+
+// pages

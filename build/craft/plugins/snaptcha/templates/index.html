@@ -1,0 +1,82 @@
+{% extends "snaptcha/_layout" %}
+
+{% set title = "Settings"|t %}
+
+{% set settings = craft.snaptcha.settings %}
+
+{% import "_includes/forms" as forms %}
+
+{% set content %}
+
+  <form method="post" accept-charset="UTF-8" data-saveshortcut="1">
+    <input type="hidden" name="action" value="plugins/savePluginSettings">
+    <input type="hidden" name="pluginClass" value="Snaptcha">
+    <input type="hidden" name="redirect" value="snaptcha">
+    {{ getCsrfInput() }}
+
+    {{ forms.lightswitchField({
+      first: true,
+      label: "Snaptcha Validation Enabled"|t,
+      name: 'settings[enabled]',
+      instructions: "Whether to validate all form submissions"|t,
+      on: settings.enabled,
+      required: true,
+      errors: settings.getErrors('enabled')
+    }) }}
+
+    <hr />
+
+    {{ forms.lightswitchField({
+      label: "One Time Key"|t,
+      name: 'settings[oneTimeKey]',
+      instructions: "Limit to a single form submission per page refresh (recommended)"|t,
+      on: settings.oneTimeKey,
+      required: true,
+      errors: settings.getErrors('oneTimeKey')
+    }) }}
+
+    {{ forms.textField({
+      label: "Expiration Time"|t,
+      name: 'settings[expirationTime]',
+      instructions: "The expiration time for form submission in minutes"|t,
+      value: settings.expirationTime,
+      required: true,
+      errors: settings.getErrors('expirationTime')
+    }) }}
+
+    {{ forms.textField({
+      label: "Field Name"|t,
+      name: 'settings[fieldName]',
+      instructions: "The name of the hidden Snaptcha input field"|t,
+      value: settings.fieldName,
+      required: true,
+      errors: settings.getErrors('fieldName')
+    }) }}
+
+    {{ forms.textField({
+      label: "Error Message"|t,
+      name: 'settings[errorMessage]',
+      instructions: "The error message that will be displayed if Snaptcha identifies a submission as spam"|t,
+      value: settings.errorMessage,
+      required: true,
+      errors: settings.getErrors('errorMessage')
+    }) }}
+
+    {{ forms.textareaField({
+      label: "Blacklist"|t,
+      name: 'settings[blacklist]',
+      instructions: "IP addresses to blacklist from all form submissions (one per line)"|t,
+      value: settings.blacklist,
+      required: false,
+      errors: settings.getErrors('blacklist')
+    }) }}
+
+    <hr />
+
+    <div class="buttons">
+      <input class="btn submit" type="submit" value="{{ 'Save'|t }}">
+    </div>
+
+  </form>
+
+{% endset %}

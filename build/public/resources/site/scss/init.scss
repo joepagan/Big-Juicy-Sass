@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+$base-font-size: 16px !default;
+@import "../../vendor/sass-rem/rem";
+
+// These styles will be loaded in the head within a <style> tag
+// This file needs to be as small as possible, only loading in the essential styles.
+
+// These imports are not actual styles, just variables & mixins
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "colours";
+
+// globally used styles
+@import "globals";
+@import "grid";
+@import "styleguide";
+@import "template";
+@import "forms";
+
+// includes
+@import "includes/_header";
+@import "includes/_main_nav";
+@import "includes/_mobile_nav";

@@ -1,0 +1,3 @@
+# fake a url so you can tell which bots are scanning your robots...
+User-agent: *
+Disallow: /somethingScannedTheRobotsDotTxt/

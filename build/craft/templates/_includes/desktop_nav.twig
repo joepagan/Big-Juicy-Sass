@@ -1,0 +1,29 @@
+{% for primaryEntries in primaryNavigation.navigation %}
+
+    {% if primaryEntries.type == 'internalLink' %}
+        {% if primaryEntries.linkEntry.first() %}
+            {% set href = primaryEntries.linkEntry.first().getUrl() %}
+            {% if primaryEntries.linkText|length > 0 %}
+                {% set text = primaryEntries.linkText %}
+            {% else %}
+                {% set text = primaryEntries.linkEntry.first.title %}
+            {% endif %}
+
+            <li class="{% if primaryEntries.linkClass %}{{ primaryEntries.linkClass }}{% endif %} {% if (href in craft.request.getUrl() and href != siteUrl) or (entry.id == "2" and href == siteUrl) %}active{% endif %}">
+                <a href="{{ href }}" title="{{ text }}">{{ text }}</a>
+            </li>
+
+        {% endif %}
+
+    {% elseif primaryEntries.type == 'externalLink' %}
+
+        {% set href = primaryEntries.externalLink %}
+        {% set text = primaryEntries.linkText %}
+
+        <li class="{% if primaryEntries.linkClass %}{{ primaryEntries.linkClass }}{% endif %} {% if href in craft.request.getUrl() and href != siteUrl %}active{% endif %}">
+            <a href="{{ href }}" title="{{ text }}" target="_blank">{{ text }}<i class="fa fa-external-link"></i></a>
+        </li>
+
+    {% endif %}
+
+{% endfor %}

@@ -1,0 +1,182 @@
+{% extends "sproutforms/_layouts/base" %}
+{% import "_includes/forms" as forms %}
+
+{% set crumbs = [
+	{ label: "Forms"|t, url: url('sproutforms/forms') }
+] %}
+
+{% set tabs = {
+    formfields:  {
+      label: "Fields"|t,
+      url: '#formfields',
+    },
+    notifications:  {
+      label: "Notifications"|t,
+      url: '#notification',
+			class: (notificationErrors is defined ? notificationErrors : null)
+    }
+} %}
+
+{% set title = form.name %}
+
+{% set fullPageForm = true %}
+{% set saveShortcutRedirect = 'sproutforms/forms/edit/{id}#settings' %}
+{% set selectedTab = 'fields' %}
+
+{% block saveButton %}
+
+	<input type="hidden" name="action" value="sproutForms/forms/saveForm">
+	<input type="hidden" name="redirect" value="sproutforms/forms/edit/{id}#settings">
+	<input type="hidden" id="formId" name="id" value="{{ form.id is defined ? form.id : '' }}">
+
+	<div class="btngroup submit first">
+		<input type="submit" class="btn submit" value="{{ 'Save'|t }}">
+		{% if form.id != null %}
+			<div class="btn submit menubtn"></div>
+			<div class="menu">
+				<ul>
+					<li><a class="formsubmit" data-param='saveAsNew' data-value="true">{{ "Save as a new form"|t }}</a></li>
+				</ul>
+			</div>
+		{% endif %}
+	</div>
+
+{% endblock %}
+
+{% block main %}
+
+	<div class="grid first" data-max-cols="3">
+		<div class="item" data-position="left" data-colspan="2">
+			<div id="fields" class="pane">
+
+				{% if tabs is defined and tabs %}
+					{% include "_includes/tabs" %}
+				{% endif %}
+
+				<div id="formfields" class="hidden">
+					{% include 'sproutforms/forms/_tabs/fieldlayoutdesigner' %}
+				</div>
+
+				<div id="notification" class="hidden">
+					{% include 'sproutforms/forms/_tabs/notifications' %}
+				</div>
+
+			</div>
+
+			{% if formId is defined %}
+
+				<div class="pane">
+
+					<div style="width:45%;padding-left:5%;padding-right:5%;float:left;">
+
+						<p><strong>{{ "One line of code"|t }}</strong></p>
+
+						{% if craft.request.getSegment(3) == 'new' %}
+
+							<input class="text nicetext fullwidth" type="text" id="display-form-code" value="{% verbatim %}{{ craft.sproutForms.displayForm('yourFormHandle') }}{% endverbatim %}">
+
+						{% else %}
+
+							<input class="text nicetext fullwidth" type="text" id="display-form-code" value="{% verbatim %}{{ craft.sproutForms.displayForm('{% endverbatim %}{{ form.handle }}{% verbatim %}') }}{% endverbatim %}">
+
+						{% endif %}
+
+					</div>
+
+					<div style="width:45%;float:left;">
+
+						<p><strong>{{ "100% Control"|t }}</strong></p>
+
+						<p>{{ 'Customize your form using <a href="http://sprout.barrelstrengthdesign.com/craft-plugins/forms/docs/customization/template-overrides" target="_blank">Template Overrides</a>, <a href="http://sprout.barrelstrengthdesign.com/craft-plugins/forms/docs/customization/rendering-options" target="_blank">Rendering Options</a>, additional <a href="http://sprout.barrelstrengthdesign.com/craft-plugins/forms/docs/customization/rendering-options"
+						target="_blank">Fields</a>, Notifications, or <a href="http://sprout.barrelstrengthdesign.com/craft-plugins/forms/docs/examples/custom-html" target="_blank">Custom HTML</a>.'|t|raw }}</p>
+
+					</div>
+
+				</div>
+
+			{% endif %}
+
+		</div>
+
+		<div class="sproutforms-sidebar item" data-position="right">
+
+			<div class="pane meta">
+
+				{% include 'sproutforms/forms/_sidebar/settings' %}
+
+				<div class="sproutforms-deleteform field">
+					<div class="heading"></div>
+					<div class="input">
+						<div class="right">
+							<input type="button" class="btn small formsubmit" value="Delete" data-action="sproutForms/forms/deleteForm" data-confirm="Are you sure you want to delete this form, all of it's fields, and all of it's data?" data-redirect="sproutforms/forms">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			{% set plugins = craft.plugins.getPlugins(false) %}
+			{% set sproutFieldsIsInstalled = plugins['sproutfields'] is defined ? plugins['sproutfields'].isInstalled() : false %}
+			{% set sproutReportsIsInstalled = plugins['sproutreports'] is defined ? plugins['sproutreports'].isInstalled() : false %}
+			{% set sproutEmailIsInstalled = plugins['sproutemail'] is defined ? plugins['sproutemail'].isInstalled() : false %}
+
+			{% if not sproutFieldsIsInstalled or not sproutReportsIsInstalled or not sproutEmailIsInstalled %}
+
+				<div class="pane">
+					<h6>Improve your forms</h6>
+
+					{% if not sproutFieldsIsInstalled %}
+					<p class="light"><a href="http://sprout.barrelstrengthdesign.com/craft-plugins/fields" target="_blank">Sprout Fields</a> &ndash; Validate Email Addresses, Phone Numbers, and URLs. Capture hidden values for your workflows and analytics. </p>
+					{% endif %}
+
+					{% if not sproutReportsIsInstalled %}
+					<p class="light"><a href="http://sprout.barrelstrengthdesign.com/craft-plugins/reports" target="_blank">Sprout Reports</a> &ndash; Generate reports and export your form data as a CSV.</p>
+					{% endif %}
+
+					{% if not sproutEmailIsInstalled %}
+					<p class="light"><a href="http://sprout.barrelstrengthdesign.com/craft-plugins/email" target="_blank">Sprout Email</a> &ndash; Send multiple, customized notification emails to admins and users.</p>
+					{% endif %}
+
+				</div>
+
+			{% endif %}
+
+
+		</div>
+	</div>
+
+{% endblock %}
+
+{% includeJsResource "js/fields.js" %}
+
+{% set js %}
+	{% if not form.handle %}
+	new Craft.HandleGenerator('#name', '#handle');
+	{% endif %}
+
+	new Craft.AdminTable({
+		tableSelector: '#formFields',
+		noObjectsSelector: '#noFormfields',
+		sortable: true,
+		reorderAction: 'sproutForms/fields/reorderFields',
+		deleteAction: 'sproutForms/fields/deleteField'
+	});
+
+	$(document).ready(function() {
+    $("input#display-form-code")
+    	.focus(function() { $(this).select(); } )
+      .mouseup(function (e) {e.preventDefault(); });
+});
+{% endset %}
+{% includeJs js %}
+
+{% set css %}
+	.sproutforms-sidebar .pane > .tabs {
+		border-radius: 4px 4px 0 0;
+		margin:0;
+	}
+	.sproutforms-deleteform {
+		border-top: 1px solid #e3e5e8;
+	}
+{% endset %}
+{% includeCss css %}

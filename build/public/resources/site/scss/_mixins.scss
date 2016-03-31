@@ -1,0 +1,152 @@
+// highlighting styles
+$prefixes: ("-webkit-","-moz-", "-o-", "");
+@mixin selection($color, $background) {
+    @each $prefix in $prefixes {
+        ::#{$prefix}selection {
+            color: $color;
+            background: $background;
+        }
+    }
+}
+
+
+//
+// from juice.sass
+//
+
+    // Strip the units from a value
+    // ----------------------------
+    @function strip-units($value) {
+    	@return $value / ($value * 0 + 1);
+    }
+
+    // Calculate rems from a px value
+    // ------------------------------
+    $base-px-default: 16px !default;
+    @function rem($px, $base-val: $base-px-default) {
+    	@if not unitless($px) {
+    		$px: strip-units($px);
+    	}
+    	@if not unitless($base-val) {
+    		$base-val: strip-units($base-val);
+    	}
+    	@return ($px / $base-val) * 1rem;
+    }
+
+    // Calculate ems from a px value
+    // ------------------------------
+    @function em($px, $base-val: $base-px-default) {
+    	@if not unitless($px) {
+    		$px: strip-units($px);
+    	}
+    	@if not unitless($base-val) {
+    		$base-val: strip-units($base-val);
+    	}
+    	@return ($px / $base-val) * 1em;
+    }
+
+// BOURBON MIXINS
+
+// bourbon transform mixin
+@mixin prefixer($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        @if $prefix == webkit {
+            -webkit-#{$property}: $value;
+        } @else if $prefix == moz {
+            -moz-#{$property}: $value;
+        } @else if $prefix == ms {
+            -ms-#{$property}: $value;
+        } @else if $prefix == o {
+            -o-#{$property}: $value;
+        } @else if $prefix == spec {
+            #{$property}: $value;
+        } @else  {
+            @warn "Unrecognized prefix: #{$prefix}";
+        }
+    }
+}
+@mixin transform($property: none) {
+    // none | <transform-function>
+    @include prefixer(transform, $property, webkit moz ms o spec);
+}
+
+//bourbon transition mixin
+@mixin transition($properties...) {
+    // Fix for vendor-prefix transform property
+    $needs-prefixes: false;
+    $webkit: ();
+    $moz: ();
+    $spec: ();
+
+    // Create lists for vendor-prefixed transform
+    @each $list in $properties {
+        @if nth($list, 1) == "transform" {
+            $needs-prefixes: true;
+            $list1: -webkit-transform;
+            $list2: -moz-transform;
+            $list3: ();
+
+            @each $var in $list {
+                $list3: join($list3, $var);
+
+                @if $var != "transform" {
+                    $list1: join($list1, $var);
+                    $list2: join($list2, $var);
+                }
+            }
+
+            $webkit: append($webkit, $list1);
+            $moz:    append($moz,    $list2);
+            $spec:   append($spec,   $list3);
+        } @else {
+            $webkit: append($webkit, $list, comma);
+            $moz:    append($moz,    $list, comma);
+            $spec:   append($spec,   $list, comma);
+        }
+    }
+
+    @if $needs-prefixes {
+        -webkit-transition: $webkit;
+        -moz-transition: $moz;
+        transition: $spec;
+    } @else {
+        @if length($properties) >= 1 {
+            @include prefixer(transition, $properties, webkit moz spec);
+        } @else {
+            $properties: all 0.15s ease-out 0s;
+            @include prefixer(transition, $properties, webkit moz spec);
+        }
+    }
+}
+
+// opacity mixin from - https://coderwall.com/p/mca5xw/sass-opacity-mixin
+
+@mixin opacity($value){
+    $ie-value: $value * 100;
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$ie-value+")";
+    filter: alpha(opacity=$ie-value);
+}
+
+@mixin columns($count, $gap) {
+    // none | <transform-function>
+    @include prefixer(column-count, $count, webkit moz ms o spec);
+    @include prefixer(column-gap, $gap, webkit moz ms o spec);
+}
+
+@mixin no-user-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin backface-visibility ($arguments) {
+    -webkit-backface-visibility: $arguments;
+    -moz-backface-visibility: $arguments;
+    -ms-backface-visibility: $arguments;
+    -o-backface-visibility: $arguments;
+    backface-visibility: $arguments;
+}

@@ -1,0 +1,17 @@
+{# load CSS in with javascript #}
+<script>
+	var stylesheets = [
+		"/resources/vendor/normalize.css/normalize.css",
+		"/resources/vendor/font-awesome/css/font-awesome.min.css",
+		//"/resources/vendor/magnific-popup/dist/magnific-popup.css",
+		//"/resources/vendor/slick-carousel/slick/slick.css",
+		"/resources/site/css/styles.css"
+	];
+	for(var i = 0; i < stylesheets.length; i++){
+		var stylesheet = document.createElement('link');
+		stylesheet.href = stylesheets[i];
+		stylesheet.rel = 'stylesheet';
+		stylesheet.type = 'text/css';
+		document.getElementsByTagName('head')[0].appendChild(stylesheet);
+	}
+</script>

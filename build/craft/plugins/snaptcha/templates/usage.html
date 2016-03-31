@@ -1,0 +1,20 @@
+{% extends "snaptcha/_layout" %}
+
+{% set selectedTab = 'usage' %}
+
+{% set content %}
+
+  <p>Add the following tag inside your form:</p>
+  <code>{{ "{{ craft.snaptcha.field }}"|raw }}</code>
+
+  <hr />
+
+  <p>This version of Snaptcha is compatible with the following forms:</p>
+  <ul class="bullets">
+    <li><a href="http://buildwithcraft.com/docs/templating/user-registration-form" target="_blank">User Registration Form</a></li>
+    <li><a href="https://github.com/pixelandtonic/GuestEntries" target="_blank">Guest Entries Plugin</a></li>
+    <li><a href="https://github.com/pixelandtonic/ContactForm" target="_blank">Contact Form Plugin</a></li>
+    <li><a href="http://sprout.barrelstrengthdesign.com/craft-plugins/forms" target="_blank">Sprout Forms Plugin (0.8.1+)</a></li>
+  </ul>
+
+{% endset %}

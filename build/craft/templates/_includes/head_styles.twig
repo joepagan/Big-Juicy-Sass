@@ -1,0 +1,7 @@
+{% if craft.FileGetContents is defined %}
+    <style>{{ craft.FileGetContents.getContents(craft.FileGetContents.getCwd() ~ "/resources/site/css/init.css")|raw }}</style>
+{% else %}
+    <link rel="stylesheet" href="/resources/site/css/init.css">
+{% endif %}
+
+{# DEV NOTE - Some styles are loaded in the footer with JS because... page speed #}
