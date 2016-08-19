@@ -1,7 +1,16 @@
 {% extends "_layout" %}
+{% set bodyClass = "" %}
+{% set bodyID = "" %}
+{% block preHeadClose %}{% endblock %}
+{% block preBodyClose %}{% endblock %}
+
+{% set metaTitleOverride = "Page not found" %}
+{% set metaDescriptionOverride = "" %}
+{% set metaImageOverride = "" %}
 
 {% block content %}
-	<h1>Page not found</h1>
 
-	<p>Please go back to the previous page</p>
+	<h1>Page not found</h1>
+	<p>Sorry, the page you are looking for could not be found.</p>
+
 {% endblock %}

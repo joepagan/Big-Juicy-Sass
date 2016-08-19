@@ -1,0 +1,75 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{% if companyInformation.companyInformation.first().companyName is defined and companyInformation.companyInformation.first().companyName|length%}{{ companyInformation.companyInformation.first().companyName }}{% elseif siteName %}{{ siteName }}{% endif %}",
+    {% if companyInformation.companyInformation.first().companySchemaDescription is defined and companyInformation.companyInformation.first().companySchemaDescription|length %}
+        "description": "{{ companyInformation.companyInformation.first().companySchemaDescription }}",
+    {% else %}
+        {# use the homepage meta description if none set #}
+        {% if craft.entries.id(12).first %}
+            {% if craft.entries.id(12).first().metaDescription|length %}
+                "description": "{{ craft.entries.id(12).first().metaDescription }}",
+            {% endif %}
+        {% endif %}
+    {% endif %}
+    {% if companyInformation.companyInformation.first().telephone is defined and companyInformation.companyInformation.first().telephone|length %}"telephone": "{{ companyInformation.companyInformation.first().telephone }}",{% endif %}
+    {% if companyInformation.companyInformation.first().faxNumber is defined and companyInformation.companyInformation.first().faxNumber|length %}"faxNumber": "{{ companyInformation.companyInformation.first().faxNumber }}",{% endif %}
+    {% if companyInformation.companyInformation.first().email is defined and companyInformation.companyInformation.first().email|length %}"email": "{{ companyInformation.companyInformation.first().email }}",{% endif %}
+
+    {# logo #}
+    {% if companyInformation.companyInformation.first().logo.first() is defined and companyInformation.companyInformation.first().logo.first()|length %}
+        "logo":"{{ companyInformation.companyInformation.first().logo.first().url }}",
+    {% elseif craft.rebrand.isLogoUploaded %}
+        "logo": "{{ craft.rebrand.logo.url }}",
+    {% endif %}
+
+    {# photo #}
+    {% if companyInformation.companyInformation.first().photo.first() is defined and companyInformation.companyInformation.first().photo.first()|length %}
+        "photo":"{{ companyInformation.companyInformation.first().photo.first().url }}",
+    {% endif %}
+
+    {% if siteUrl %}"url": "{{ siteUrl }}",{% endif %}
+
+    "address": {
+        "@type": "PostalAddress",
+
+            {% if companyInformation.companyInformation.first().streetAddress is defined and companyInformation.companyInformation.first().streetAddress|length %}
+                "streetAddress": "{{ companyInformation.companyInformation.first().streetAddress }}",
+            {% endif %}
+            {% if companyInformation.companyInformation.first().addressLocality is defined and companyInformation.companyInformation.first().addressLocality|length %}
+                "addressLocality": "{{ companyInformation.companyInformation.first().addressLocality }}",
+            {% endif %}
+            {% if companyInformation.companyInformation.first().addressRegion is defined and companyInformation.companyInformation.first().addressRegion|length %}
+                "addressRegion": "{{ companyInformation.companyInformation.first().addressRegion }}",
+            {% endif %}
+            {% if companyInformation.companyInformation.first().postalCode is defined and companyInformation.companyInformation.first().postalCode|length %}
+                "postalCode": "{{ companyInformation.companyInformation.first().postalCode }}",
+            {% endif %}
+            {% if companyInformation.companyInformation.first().addressCountry is defined and companyInformation.companyInformation.first().addressCountry|length %}
+                "addressCountry": "{{ companyInformation.companyInformation.first().addressCountry }}"
+            {% endif %}
+
+    },
+
+    {% if companyInformation.companyInformation.first().VATNumber is defined and companyInformation.companyInformation.first().VATNumber|length %}
+        "vatID": "{{ companyInformation.companyInformation.first().VATNumber }}",
+    {% endif %}
+
+    {% if companyInformation.companyInformation.first().addressCoordinatesLongitude is defined and companyInformation.companyInformation.first().addressCoordinatesLongitude|length
+        and companyInformation.companyInformation.first().addressCoordinatesLatitude is defined and companyInformation.companyInformation.first().addressCoordinatesLatitude|length %}
+        "geo": {
+            "@type": "GeoCoordinates",
+            "longitude": "{{ companyInformation.companyInformation.first().addressCoordinatesLongitude }}",
+            "latitude": "{{ companyInformation.companyInformation.first().addressCoordinatesLatitude }}"
+        },
+    {% endif %}
+    {% if companyInformation.companyOpeningHours.first() %}
+        "openingHours": [
+            {% for hours in companyInformation.companyOpeningHours %}
+                "{{ hours.rangeOfOpeningHours }}"{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    {% endif %}
+}
+</script>

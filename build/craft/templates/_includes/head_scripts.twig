@@ -1,3 +1,22 @@
+{# add wf-loading class to html element straight away so we can hide/show fonts that aren't styled straight away #}
+<script>
+    document.documentElement.className += " wf-loading";
+</script>
+
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Roboto+Slab:400,700,300,100:latin' ] },
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+
+
 <!--[if lt IE 9]>
 	<script src="/resources/vendor/html5shiv/dist/html5shiv.min.js"></script>
 	<script src="/resources/vendor/html5shiv/dist/html5shiv-printshiv.min.js"></script>

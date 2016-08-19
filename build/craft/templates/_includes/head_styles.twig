@@ -1,7 +1,13 @@
+{# This utilises the FileGetContents craft plugin to inject inline styles for page speed - https://github.com/lexbi/File-Get-Contents-Plugin---CraftCMS #}
+{% set initCssFilePath = "/resources/site/css/init.css" %}
 {% if craft.FileGetContents is defined %}
-    <style>{{ craft.FileGetContents.getContents(craft.FileGetContents.getCwd() ~ "/resources/site/css/init.css")|raw }}</style>
+    {% if craft.FileGetContents.fileExists(craft.FileGetContents.getCwd() ~ initCssFilePath) %}
+        <style>{{ craft.FileGetContents.getContents(craft.FileGetContents.getCwd() ~ initCssFilePath)|raw }}</style>
+    {% else %}
+        <link rel="stylesheet" href="{{ initCssFilePath }}">
+    {% endif %}
 {% else %}
-    <link rel="stylesheet" href="/resources/site/css/init.css">
+    <link rel="stylesheet" href="{{ initCssFilePath }}">
 {% endif %}
 
 {# DEV NOTE - Some styles are loaded in the footer with JS because... page speed #}

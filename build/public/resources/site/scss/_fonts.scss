@@ -1,0 +1,36 @@
+// roboto slab font
+@mixin f_RobotoSlab($weight:"", $style:""){
+    font-family: 'Roboto Slab', serif;
+    // normal
+    @if $weight == "" or $weight == "400" or $weight == "normal"{
+        font-weight:400;
+    }
+
+    // bold
+    @else if $weight == "bold" or $weight == "700"{
+        font-weight:700;
+    }
+
+    // extra bold
+    @else if $weight == "thin" or $weight == "100"{
+        font-weight:100;
+    }
+
+    // ultra bold
+    @else if $weight == "light" or $weight == "300"{
+        font-weight:300;
+    }
+
+    // italic
+    @else if $weight == "italic"{
+        font-style:italic;
+    }
+
+    @if $style == "italic"{
+        font-style:italic;
+    }
+
+    @else{
+        font-style:normal;
+    }
+}

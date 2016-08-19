@@ -10,22 +10,21 @@
 return array(
 
     '*' => array(
-		'cpTrigger' => 'admin135',
+        'cpTrigger' => 'admin135',
 		'userSessionDuration' => false,
 		'addTrailingSlashesToUrls' => false,
 		'omitScriptNameInUrls' => true,
 		'generateTransformsBeforePageLoad' => true,
         'sendPoweredByHeader' => false,
         'allowedFileExtensions' => 'aiff, asf, avi, csv, doc, docx, gif, htm, html, jpeg, jpg, mov, mp3, mp4, m4a, mpeg, mpg, ods, odt, ogg, ogv, pdf, png, ppt, pptx, qt, rtf, svg, txt, vob, wav, webm, wma, wmv, xls, xlsx',
-        'name'=>'Website',
+        //'maxUploadFileSize' => 100000000, // 100mb
+        'name'=>'SiteName',
         'defaultCpLanguage' => 'en_gb',
-        'phpSessionName' => 'CmsSessionId',
+        'phpSessionName' => 'sessionId',
+        'timezone' => 'Europe/London',
 		'environmentVariables' => array(
 			'fileSystemPath' => '../../public'
 		),
-        'varnishHosts' => array(
-            'http://www.website.co.uk:8080'
-        ),
         'sproutForms' => array(
             'enableFileAttachments' => true
         ),

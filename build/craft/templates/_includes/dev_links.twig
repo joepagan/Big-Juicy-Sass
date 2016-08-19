@@ -1,0 +1,31 @@
+{% if entry is defined and craft.session.isLoggedIn and craft.config.environment != "local" %}
+
+    {% if currentUser.can('accessCp') %}
+
+        <div class="dev_links">
+            {% include "_partials/button_primary"
+                with {
+                    "text": "Control Panel",
+                    "theme": "light",
+                    "link": cpUrl(),
+                    "target": "_blank"
+                }
+            %}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {% include "_partials/button_primary"
+                with {
+                    "text": "Edit entry",
+                    "theme": "light",
+                    "link": entry.getCpEditUrl(),
+                    "target": "_blank"
+                }
+            %}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <a href="#" onclick="$('.dev_links').hide(); return false;">close</a>
+
+        </div>
+
+    {% endif %}
+
+{% endif %}

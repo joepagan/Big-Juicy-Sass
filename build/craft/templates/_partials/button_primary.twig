@@ -1,0 +1,85 @@
+{#
+example of include usage
+
+{% include "_partials/button_primary"
+    with {
+        "text": "Submit", // the text shown on the button
+        "link": "/barry", // hard coded link
+        "target": "_blank" // target attribute
+        "entryId": "2", // it will link to an entry if you have it's id 2 = homepage
+        "linkedEntry": "{{ craft.entries.id(123).first() }}" // pass it an entry object
+        "title": "", // title attribute
+        "theme": "dark", // you can have "dark" (dark is dark test, better on a light background), "light" (light is light text, better on a dark background)
+        "class": "", // class attribute
+        "buttonElement": "", could be "a", "span", "button"
+        "buttonType": "", // could be "submit", "button" etc
+    }
+%}
+
+for an ez copy pasta as the object above doesn't allow comments :'(
+
+{% include "_partials/button_primary"
+    with {
+        "text": "",
+        "link": "",
+        "target": "",
+        "entryId": "",
+        "linkedEntry": "",
+        "title": "",
+        "theme": "",
+        "class": "",
+        "buttonElement": "",
+        "buttonType": "",
+    }
+%}
+
+#}
+
+{# If theme is defined add a class to the element #}
+{% if theme is defined and theme|length %}
+    {% if class is not defined %}
+        {% set class = "theme_" ~ theme %}
+    {% else %}
+        {% set class = class ~ " theme_" ~ theme %}
+    {% endif %}
+{% else %}
+    {% if class is not defined %}
+        {% set class = "theme_dark" %}
+    {% else %}
+        {% set class = class ~ " theme_dark" %}
+    {% endif %}
+{% endif %}
+
+{% if buttonElement is not defined or (buttonElement is defined and buttonElement == "a") or (buttonElement is defined and buttonElement == "") %}
+    {% if link is defined and link != "" %}
+        <a href="{{ link }}" class="cta primary {{ class }}"
+            {% if title is defined and title|length %} title="{{ title }}"{% endif %}
+            {% if target is defined and target|length %} target="{{ target }}"{% endif %}
+            {% if onclick is defined and onclick|length %} onclick="{{ onclick }}"{% endif %}>
+    {% elseif linkedEntry is defined and linkedEntry|length %}
+        {% if linkedEntry %}
+            <a href="{{ linkedEntry.url }}" class="cta primary {{ class }}"
+            {% if title is defined %} title="{{ title }}"{% endif %}
+            {% if onclick is defined and onclick|length %} onclick="{{ onclick }}"{% endif %}>
+        {% endif %}
+    {% elseif entryId is defined and entryId|length %}
+        {% if craft.entries.id(entryId).first() %}
+            <a href="{{ craft.entries.id(entryId).first().url }}" class="cta primary {{ class }}"
+        {% if title is defined %} title="{{ title }}"{% endif %}
+        {% if onclick is defined and onclick|length %} onclick="{{ onclick }}"{% endif %}>
+        {% endif %}
+    {% endif %}
+{% elseif buttonElement == "button"%}
+    <button
+        type="{% if buttonType is defined %}{{ buttonType }}{% else %}submit{% endif %}" class="cta primary {{ class }}"
+    {% if title is defined %} title="{{ title }}"{% endif %}
+    {% if onclick is defined and onclick|length %} onclick="{{ onclick }}"{% endif %}>
+{% endif %}
+
+        <span class="cta_primary_text">{{ text }}</span>
+
+{% if buttonElement is not defined or (buttonElement is defined and buttonElement == "a") or (buttonElement is defined and buttonElement == "") %}
+    </a>
+{% elseif buttonElement == "button"%}
+    </button>
+{% endif %}
