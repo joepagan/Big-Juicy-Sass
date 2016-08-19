@@ -12,4 +12,8 @@ class FileGetContentsVariable
       return getcwd();
     }
 
+    public function fileExists($path){
+        return file_exists($path);
+    }
+
 }
