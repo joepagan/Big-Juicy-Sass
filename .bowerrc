@@ -1,1 +1,16 @@
-{"directory": "./build/public/resources/vendor/"}
+{
+    "directory": "./build/public/resources/vendor/",
+    "ignoredDependencies": [
+        "outlayer",
+        "matches-selector",
+        "get-style-property",
+        "get-size",
+        "fizzy-ui-utils",
+        "eventie",
+        "eventEmitter",
+        "doc-ready",
+        "classie",
+        "masonry",
+        "jquery"
+    ]
+}
