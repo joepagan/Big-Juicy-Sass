@@ -1,24 +1,6 @@
 {% header "X-UA-Compatible: IE=edge" %}
 
-<meta charset="utf-8">
-<title>{% if (entry is defined and entry.metaTitle|length) %}{{ entry.metaTitle }}{% elseif (metaTitleOverride is defined and metaTitleOverride|length) %}{{ metaTitleOverride }}{% elseif (entry is defined and entry.pageTitle|length) %}{{ entry.pageTitle }} - {{ siteName }}{% elseif (entry is defined and entry.title|length) %}{{ entry.title }} - {{ siteName}}{% else %}{{ siteName }}{% endif %}</title>
-<meta name="description" content='{% if (entry is defined and entry.metaDescription|length) %}{{ entry.metaDescription }}{% elseif (metaDescriptionOverride is defined and metaDescriptionOverride|length) %}{{ metaDescriptionOverride }}{% endif %}'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 
-{# Open graph protocol #}
-<meta property="og:title" content="{% if (entry is defined and entry.metaTitle|length) %}{{ entry.metaTitle }}{% elseif (metaTitleOverride is defined and metaTitleOverride|length) %}{{ metaTitleOverride }}{% elseif (entry is defined and entry.pageTitle|length) %}{{ entry.pageTitle }} - {{ siteName }}{% elseif (entry is defined and entry.title|length) %}{{ entry.title }} - {{ siteName}}{% else %}{{ siteName }}{% endif %}">
-<meta property="og:description" content="{% if (entry is defined and entry.metaDescription|length) %}{{ entry.metaDescription }}{% elseif(metaDescriptionOverride is defined and metaDescriptionOverride|length) %}{{metaDescriptionOverride}}{% endif %}">
-<meta property="og:image" content="{% if (entry is defined and entry.metaImage.first()) %}{{ entry.metaImage.first().getUrl({ width: 1200,height:600, quality:80  }) }}{% elseif (metaImageOverride is defined and metaImageOverride|length) %}{{ metaImageOverride }}{% elseif craft.assets.id("4157").first() %}{{ craft.assets.id("4157").first().getUrl({ width: 1000,height:500, quality:80 })  }}{% endif %}">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="{{siteName}}">
-<meta property="og:url" content="{{ craft.request.url }}">
-
-{# twitter cards #}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="{{ craft.request.url }}">
-<meta name="twitter:title" content="{% if (entry is defined and entry.metaTitle|length) %}{{ entry.metaTitle }}{% elseif (metaTitleOverride is defined and metaTitleOverride|length) %}{{ metaTitleOverride }}{% elseif (entry is defined and entry.pageTitle|length) %}{{ entry.pageTitle }} - {{ siteName }}{% elseif (entry is defined and entry.title|length) %}{{ entry.title }} - {{ siteName}}{% else %}{{ siteName }}{% endif %}">
-<meta name="twitter:description" content="{% if (entry is defined and entry.metaDescription|length) %}{{ entry.metaDescription }}{% elseif (metaDescriptionOverride is defined and metaDescriptionOverride|length) %}{{metaDescriptionOverride}}{% endif %}">
-<meta name="twitter:image" content="{% if (entry is defined and entry.metaImage.first()) %}{{ entry.metaImage.first().getUrl({ width: 1024,height:512, quality:80  }) }}{% elseif (metaImageOverride is defined and metaImageOverride|length) %}{{ metaImageOverride }}{% elseif craft.assets.id("4157").first() %}{{ craft.assets.id("4157").first().getUrl({ width: 1000,height:500, quality:80 }) }}{% endif %}">
-
-{% include "_includes/schema_local_business" %}
+{# {% hook 'seomaticRender' %} #}
