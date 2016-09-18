@@ -1,5 +1,11 @@
-<!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-legacy/dist/jquery.min.js"><\/script>')</script> <![endif]-->
-<!--[if gte IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-modern/dist/jquery.min.js"><\/script>')</script><!--<![endif]-->
+{# jQuery v1, only used on ie8 and below #}
+<!--[if lt IE 9]><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-v1/dist/jquery.min.js"><\/script>')</script> <![endif]-->
+
+{# jQuery v2 if you even wanted it #}
+{# <!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-v2/dist/jquery.min.js"><\/script>')</script><!--<![endif]--> #}
+
+{# jQuery v3 #}
+<!--[if gte IE 9]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> <script>window.jQuery || document.write('<script src="/resources/vendor/jquery-v3/dist/jquery.min.js"><\/script>')</script><!--<![endif]-->
 
 {# General scripts - now loaded in with gulp concat #}
 
