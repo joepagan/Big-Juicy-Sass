@@ -3,12 +3,11 @@
   "version": "1.01",
   "description": "boilerplate files",
   "dependencies": {
-    "jquery-fittext.js": null,
     "font-awesome": null,
     "gsap": null,
     "html5shiv": null,
+    "jquery-fittext.js": null,
     "jquery-validate": null,
-    "jquery-migrate":null,
     "jquery-legacy":"jquery#^1",
     "jquery-modern":"jquery#2",
     "isotope": null,
@@ -19,12 +18,9 @@
     "modernizr": null,
     "moment": null,
     "normalize.css": null,
-    "placeholders":null,
     "photoswipe": null,
-    "respond": null,
     "slick-carousel": null,
     "sass-rem":null,
-    "velocity": null,
     "waypoints": null
   },
   "authors": [

@@ -1,22 +1,18 @@
 Big-Juicy-Sass
 ==============
 
-Just my own personal boilerplate, you don't have to use it, but it's filled with stuff that I find really useful.
+My own boilerplate for a typical CraftCMS setup. Filled with useful craft configs, templates, js, and css.
 
-I find it quite useful for templating on a local environment with includes and such.
+## Frameworks
 
-I have now added all the bower resources into the repo, as it gives you access to the resources straight away...
-
-If you do want the absolute latest versions of the resources "CD" into the top-level directory (where bower.json lives) then use "bower install" in cmd line.
-
-Some resources are not available in bower, so I will try keep them as up to date as I can in here here (placeholders.js & my preferred stripped down version of modernizr).
+- Materialize - generally only use the parallax js plugin
 
 ## SASS/SCSS/CSS
 
 Includes:
 
 - SASS REM (bower) - [https://github.com/ry5n/rem/](https://github.com/ry5n/rem/)
-- Normalise (bower) - [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/)
+- Normalize.css (bower) - [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/)
 - Font Awesome (bower) - [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
 
 ## JS/jQuery
@@ -24,9 +20,6 @@ Lots of plugin here:
 
 - jQuery 1.11.3 (CDN & local fallback (bower))
 - jQuery 2.1.4 (CDN & local fallback (bower))
-- jQuery Migrate (bower) - [https://github.com/jquery/jquery-migrate/](https://github.com/jquery/jquery-migrate/)
-- Respond JS (bower) - [https://github.com/scottjehl/Respond](https://github.com/scottjehl/Respond)
-- Velocity (bower) - [http://julian.com/research/velocity/](http://julian.com/research/velocity/)
 - GSAP (bower) - [http://greensock.com/gsap](http://greensock.com/gsap)
     - jQuery GSAP
     - TimelineLite
@@ -42,6 +35,10 @@ Lots of plugin here:
 - jQuery Validate (bower) - [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation)
 - Waypoints.js (bower) - [https://github.com/imakewebthings/jquery-waypoints](https://github.com/imakewebthings/jquery-waypoints)
 - html5shiv (bower) - [https://github.com/afarkas/html5shiv](https://github.com/afarkas/html5shiv)
+- FitText.js
+- isotope.js
+- MatchHeight.js
+
 
 ### Non Bower resources
 These resources are either not available in bower OR, in the case of modernizr, it's more specific to my own projects
