@@ -1,10 +1,7 @@
 {# load CSS in with javascript #}
 <script>
 	var stylesheets = [
-		"/resources/vendor/normalize.css/normalize.css",
-		"/resources/vendor/font-awesome/css/font-awesome.min.css",
-		//"/resources/vendor/magnific-popup/dist/magnific-popup.css",
-		//"/resources/vendor/slick-carousel/slick/slick.css",
+		//"/resources/vendor/css/vendorstyles.min.css",
 		"/resources/site/css/styles.css"
 	];
 	for(var i = 0; i < stylesheets.length; i++){
@@ -14,4 +11,11 @@
 		stylesheet.type = 'text/css';
 		document.getElementsByTagName('head')[0].appendChild(stylesheet);
 	}
+
+	// normalise to prepend everything so that all the other css rules are more important & therefore override them if needed.
+    var stylesheet = document.createElement('link');
+    stylesheet.href = "/resources/vendor/normalize.css/normalize.css";
+    stylesheet.rel = 'stylesheet';
+    stylesheet.type = 'text/css';
+    document.getElementsByTagName('head')[0].insertBefore(stylesheet, document.getElementsByTagName('head')[0].childNodes[0]);
 </script>
