@@ -11,52 +11,43 @@ return array(
 
     '*' => array(
         'cpTrigger' => 'admin135',
-		'userSessionDuration' => false,
 		'addTrailingSlashesToUrls' => false,
 		'omitScriptNameInUrls' => true,
 		'generateTransformsBeforePageLoad' => true,
         'sendPoweredByHeader' => false,
         'allowedFileExtensions' => 'aiff, asf, avi, csv, doc, docx, gif, htm, html, jpeg, jpg, mov, mp3, mp4, m4a, mpeg, mpg, ods, odt, ogg, ogv, pdf, png, ppt, pptx, qt, rtf, svg, txt, vob, wav, webm, wma, wmv, xls, xlsx',
-        //'maxUploadFileSize' => 100000000, // 100mb
-        'name'=>'SiteName',
+        'maxUploadFileSize' => '10485760', // 10mb
+        //'name'=>'',
         'defaultCpLanguage' => 'en_gb',
         'phpSessionName' => 'sessionId',
         'timezone' => 'Europe/London',
 		'environmentVariables' => array(
 			'fileSystemPath' => '../../public'
-		),
-        'sproutForms' => array(
-            'enableFileAttachments' => true
-        ),
-        'environment' => 'live'
+		)
 	),
 
 	// Live - uncomment pre live (this messes with the production environment)
-	'website.com' => array(
-		'siteUrl' => '//www.website.com',
-		'devMode' => false,
-        'environment' => 'live'
-	),
+	// '' => array(
+	// 	'siteUrl' => '',
+	// 	'devMode' => false,
+	// ),
 
 	// Production
-	'production.website.co.uk' => array(
-		'siteUrl' => '//production.website.co.uk',
-		'devMode' => false,
-        'environment' => 'production'
-	),
+	// '' => array(
+	// 	'siteUrl' => '',
+	// 	'devMode' => false,
+	// ),
 
 	// // Staging
-	'staging.website.co.uk' => array(
-		'devMode' => true,
-		'siteUrl' => 'http://staging.website.co.uk',
-        'environment' => 'staging'
-	),
+	// '' => array(
+	// 	'devMode' => true,
+	// 	'siteUrl' => ''
+	// ),
 
-	'.dev' => array(
-		'siteUrl' => 'http://'.$_SERVER['HTTP_HOST'].'.dev',
+    '.dev' => array(
+		'siteUrl' => 'http://'.$_SERVER['HTTP_HOST'],
 		'devMode' => true,
-		'cacheMethod' => 'file',
-        'environment' => 'local'
+		'cacheMethod' => 'file'
 	)
 
 );
