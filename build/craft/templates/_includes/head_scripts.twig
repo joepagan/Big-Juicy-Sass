@@ -4,17 +4,28 @@
 </script>
 
 <script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Roboto+Slab:400,700,300,100:latin' ] },
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>
+    WebFontConfig = {
+        // google: {
+        //     families: [
+        //         'Roboto+Slab:400,700,300,100:latin',
+        //         'Roboto:300,400,100,700:latin',
+        //         'Lato:300,400,700:latin',
+        //         'Material+Icons'
+        //     ]
+        // },
+        // custom:{
+        //     families: ["FontAwesome"],
+        //     urls: ["/resources/vendor/font-awesome/css/font-awesome.min.css"],
+        // }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = '/resources/vendor/webfontloader/1.6.26/webfontloader.min.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })(); </script>
 
 
 <!--[if lt IE 9]>
