@@ -1,4 +1,4 @@
-{% if entry is defined and craft.session.isLoggedIn and craft.config.environment != "local" %}
+{% if entry is defined and craft.session.isLoggedIn %}
 
     {% if currentUser.can('accessCp') %}
 
