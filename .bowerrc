@@ -10,6 +10,7 @@
         "eventEmitter",
         "doc-ready",
         "classie",
+        "packery",
         "masonry",
         "jquery"
     ]
