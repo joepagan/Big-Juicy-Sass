@@ -80,7 +80,7 @@ gulp.task('vendorscripts', function() {
   return gulp.src([
         // paths.vendor+"/modernizr-stripped/modernizr.js",
         // paths.vendor+"/moment/min/moment.min.js",
-        // paths.vendor+"/waypoints/lib/jquery.waypoints.min.js",
+        // paths.vendor+"/waypoints/lib/noframework.waypoints.min.js",
         // paths.vendor+"/matchHeight/jquery.matchHeight-min.js",
         // paths.vendor+"/jquery-validate/dist/jquery.validate.min.js",
         // paths.vendor+"/materialize/js/parallax.js",
