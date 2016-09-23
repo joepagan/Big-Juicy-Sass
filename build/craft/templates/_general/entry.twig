@@ -1,0 +1,14 @@
+{% extends "_layout" %}
+
+{% set bodyClass = "" %}
+{% set bodyID = "" %}
+{% block preHeadClose %}{% endblock %}
+{% block preBodyClose %}{% endblock %}
+
+{% block content %}
+
+    {% include "_partials/breadcrumbs" %}
+    <h1>{{ entry.pageTitle ?: entry.title }}</h1>
+    {% include "_partials/page_content" %}
+
+{% endblock %}

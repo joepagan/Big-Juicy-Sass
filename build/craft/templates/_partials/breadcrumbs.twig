@@ -1,0 +1,11 @@
+{% if entry is defined %}
+    <div class="fw breadcrumbs_wrapper">
+        <ul class="breadcrumbs">
+            <li><a href="/">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+            {% for crumb in entry.getAncestors() %}
+                <li>{{ crumb.getLink() }}<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+            {% endfor %}
+            <li><a href="{{ entry.url }}">{% if entry.pageTitle %}{{ entry.pageTitle }}{% else %}{{ entry.title }}{% endif %}</a></li>
+        </ul>
+    </div>
+{% endif %}
