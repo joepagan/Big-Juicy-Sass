@@ -53,7 +53,7 @@
                                 {% if block.image.first() %}
 
                                     {# crop image if bigger than container .row #}
-                                    <img src="{{ (block.image and entry.image.width>960) ? ( entry.image.first().getUrl({ mode:'resize', width:960, quality:80 }) ?? entry.image.first().url ) : '/fallback_image.jpg' }}" alt="{{ block.image.first().alt }}" >
+                                    <img src="{{ block.image ? block.image.first().width>960 ? block.image.first().getUrl({ mode:'resize', width:960, quality:80 }) : block.image.first().url : '/fallback_image.jpg' }}" alt="{{ block.image.first().alt }}">
 
                                 {# If hot linked image (imgur/giphycat) #}
                                 {% elseif block.externalImage %}
