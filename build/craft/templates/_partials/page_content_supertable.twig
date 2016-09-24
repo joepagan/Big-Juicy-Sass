@@ -1,0 +1,170 @@
+{% for row in entry.pageContent %}
+
+    {% set rowWrapperTheme = "theme_" ~ row.contentWrapper.type("wrapperSettings").first().wrapperTheme.value %}
+    {% set rowWrapperClass = row.contentWrapper.type("wrapperSettings").first().wrapperClass %}
+
+    {# The opening content wrapper #}
+    <section class="content_wrapper {{ rowWrapperTheme ?? "theme_grey" }} {{ rowWrapperClass ?? "" }}">
+
+        {# content blocks #}
+        {% for block in row.getFieldLayout.fields %}
+
+            {% switch block.field.handle %}
+
+                {# Text block #}
+                {% case "text" %}
+                    <div class="block text_block {{ block.blockClass }}">
+                        {# Just the header #}
+                        {% if block.header %}
+                            {% if block.headerElement.value %}
+                                {# when the heading element is set #}
+                                <{{block.headerElement.value }}>
+                            {% else %}
+                                {# when an heading element isn't set but the matrix block is not the first and has a title #}
+                                <h2>
+                            {% endif %}
+                                {# The title for this block #}
+                                {{ block.header }}
+                            {% if block.headerElement.value %}
+                                {# when the heading element is set #}
+                                </{{block.headerElement.value }}>
+                            {% else %}
+                                {# when an heading element isn't set but the matrix block is not the first and has a title #}
+                                </h2>
+                            {% endif %}
+                        {% endif %}
+                        {# The text content #}
+                        {% if block.text %}
+                            {{ block.text }}
+                        {% endif %}
+                    </div>
+
+                {# Image Block #}
+                {% case "image" %}
+                    <div class="block image_block {{ block.blockClass }}">
+                        {# if there is an image #}
+                        {% if block.image.first() or block.externalImage %}
+                            <figure>
+                                {# Opening link #}
+                                {% if block.imageExternalLink or block.imageInternalLink.first() %}
+                                {% endif %}
+
+                                {# If image exists #}
+                                {% if block.image.first() %}
+
+                                    {# crop image if bigger than container .row #}
+                                    <img src="{{ (block.image and entry.image.width>960) ? ( entry.image.first().getUrl({ mode:'resize', width:960, quality:80 }) ?? entry.image.first().url ) : '/fallback_image.jpg' }}" alt="{{ block.image.first().alt }}" >
+
+                                {# If hot linked image (imgur/giphycat) #}
+                                {% elseif block.externalImage %}
+                                    <img src="{{ block.externalImage }}" alt="">
+                                {% endif %}
+
+                                {# If there is an image caption or source or source link #}
+                                {% if block.imageCaption or block.imageSource or block.imageSourceLink %}
+                                    <figcaption>
+                                        {{ block.imageCaption }}
+
+                                        {% if block.imageSource or block.imageSourceLink%}
+                                            <div class="source">
+                                                {% if block.imageSource and block.imageSourceLink %}
+                                                    <span class="label">Source:</span>
+                                                    <a href="{{ block.imageSourceLink }}">{{ block.imageSource }}</a>
+                                                {% elseif block.imageSource %}
+                                                    <span class="label">Source:</span>
+                                                    {{ block.imageSource }}
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                    </figcaption>
+                                {% endif %}
+
+                            </figure>
+                        {% endif %}
+
+                    </div>
+
+                {# Button block #}
+                {% case "button" %}
+
+                {% if (block.buttonInternalLink and block.buttonInternalLink.first()) or block.buttonExternalLink %}
+
+                    {# button internal link #}
+                    {% set buttonInternalLink = "" %}
+                    {% if block.buttonInternalLink %}
+                        {% if block.buttonInternalLink.first() %}
+                            {% set buttonInternalLink = block.buttonInternalLink.first().url %}
+                        {% endif %}
+                    {% endif %}
+
+                    {# opening internal link in new window #}
+                    {% set openInternalLinkInNewWindow = "" %}
+                    {% if block.openInternalLinkInNewWindow == "yes" or block.buttonExternalLink %}
+                        {% set openInternalLinkInNewWindow = "_blank" %}
+                    {% endif %}
+
+                    <div class="block cta_block {{ block.blockClass }}">
+
+                        {% include "_partials/button_primary"
+                            with {
+                                "text": block.buttonText,
+                                "link": block.buttonExternalLink,
+                                "target": openInternalLinkInNewWindow,
+                                "linkedEntry": buttonInternalLink,
+                                "title": block.buttonTitle,
+                                "theme": block.buttonTheme
+                            }
+                        %}
+
+                    </div>
+                {% endif %}
+
+                {# Quote block #}
+                {% case "quote" %}
+
+                    {% if block.quote %}
+                        <blockquote>
+                            <p>{{ block.quote }}</p>
+                            {% if block.source or block.sourceLink %}
+                                <footer>-
+                                    <cite>
+                                        {% if block.sourceLink %}
+                                            <a href="{{ block.sourceLink }}">{{ block.source ?: "Source" }}</a>
+                                        {% else %}
+                                            {{ block.source }}
+                                        {% endif %}
+                                    </cite>
+                                </footer>
+                            {% endif %}
+                        </blockquote>
+                    {% endif %}
+
+            {% endswitch %}
+
+        {% endfor %}
+
+        {# full width block #}
+        {% for block in row.fullWidthImage %}
+            {% if block.type == "fullWidthImage" %}
+                {% if block.fullWidthImage.first() %}
+                    <div class="block fw fw_image_block">
+                        {% if block.fullWidthHeader %}
+                            {{ block.fullWidthHeader }}
+                        {% endif %}
+                        {% if block.fullWidthSubHeader %}
+                            <p>{{ block.fullWidthSubHeader }}</p>
+                        {% endif %}
+                        <img src="{{ block.fullWidthImage.first().getUrl({ mode:"fit", width:1920 }) }}" alt="{{ block.fullWidthImage.first().alt }}" class="img">
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+
+    </section>
+
+
+
+
+
+{% endfor %}

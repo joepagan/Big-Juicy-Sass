@@ -1,0 +1,29 @@
+{% if entry.pageBanners.first() %}
+	<header id="header">
+		{% for banner in entry.pageBanners %}
+			<div class="text">
+				<h1 class="title">
+					{% if banner.bannerHeader %}
+						{{ banner.bannerHeader }}
+					{% elseif entry.pageTitle %}
+						{{ entry.pageTitle }}
+					{% else %}
+						{{ entry.title }}
+					{% endif %}
+				</h1>
+			</div>
+			{% if banner.bannerImage.first() %}
+				<div class="parallax-container">
+			      <div class="parallax"><img src="{{ banner.bannerImage.first().getUrl(
+					  {
+						  mode:"crop",
+						  width:1920,
+						  height:660,
+						  quality:80
+					  }
+				  ) }}" alt="{{ banner.bannerImage.first().alt }}"></div>
+			    </div>
+			{% endif %}
+		{% endfor %}
+	</header>
+{% endif %}

@@ -1,0 +1,82 @@
+{% if entry.pageContent.first() %}
+
+    <section class="fw content">
+        <div class="row">
+            {% for block in entry.pageContent %}
+
+                {% switch block.type %}
+
+                    {% case "text" %}
+
+                        <div class="text_block block">
+
+                            {% if block.header %}
+
+                                {# when the heading element is set #}
+                                {# when an heading element isn't set but the matrix block is not the first and has a title #}
+                                <{{ block.headerElement.value ?: "h2" }} class="header">
+
+
+                                {# The title for this block #}
+                                {{ block.header }}
+
+                                {# when the heading element is set #}
+                                {# when an heading element isn't set but the matrix block is not the first and has a title #}
+                                </{{ block.headerElement.value ?: "h2" }}>
+
+                            {% endif %}
+
+                            {{ block.text ?: "" }}
+
+                        </div>
+
+                    {% case "image" %}
+
+                        <div class="img_block block">
+
+                            {# if there is an image #}
+                            <img src="{{ (block.image and entry.image.width>960) ? ( entry.image.first().getUrl({ mode:'resize', width:960, quality:80 }) ?? entry.image.first().url ) : '/fallback_image.jpg' }}" alt="{{ block.image.first().alt }}" >
+
+                        </div>
+
+                    {% case "button" %}
+
+                        {% if block.buttonLink  %}
+
+                            {% set buttonLink = block.buttonLink %}
+                            {% set buttonText = "Read more" %}
+                            {% set buttonClass = "" %}
+                            {% set openInNewWindow = "" %}
+
+                            {% if block.buttonText %}
+                                {% set buttonText = block.buttonText %}
+                            {% endif %}
+                            {% if block.buttonClass %}
+                                {% set buttonClass = block.buttonClass %}
+                            {% endif %}
+                            {% if block.openInNewWindow == "yes" %}
+                                {% set openInNewWindow = "_blank" %}
+                            {% endif %}
+
+                            <div class="button_block block">
+
+                                {% include "_partials/button_primary"
+                                    with {
+                                        "text": buttonText,
+                                        "link": buttonLink,
+                                        "target": openInNewWindow,
+                                        "class": buttonClass,
+                                        "postTextMarkup": "&raquo;"
+                                    }
+                                %}
+
+                            </div>
+                        {% endif %}
+
+                {% endswitch %}
+            {% endfor %}
+
+        </div>
+    </section>
+
+{% endif %}
