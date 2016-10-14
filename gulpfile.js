@@ -1,16 +1,19 @@
-var gulp = require("gulp"),
-sass = require("gulp-sass"),
-sourcemaps = require("gulp-sourcemaps"),
-uglify = require("gulp-uglify"),
-rename = require("gulp-rename"),
-jshint = require('gulp-jshint'),
-imagemin = require("gulp-imagemin"),
-notify = require("gulp-notify"),
-include = require("gulp-include"),
-livereload = require('gulp-livereload'),
-concat = require('gulp-concat'),
-resources = "./build/public/resources/site",
-paths = {
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var sourcemaps = require("gulp-sourcemaps");
+var uglify = require("gulp-uglify");
+var rename = require("gulp-rename");
+var jshint = require('gulp-jshint');
+var imagemin = require("gulp-imagemin");
+    // jpgs
+    var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+    //pngs - using built in optipng (best lossless compression)
+var notify = require("gulp-notify");
+var include = require("gulp-include");
+var livereload = require('gulp-livereload');
+var concat = require('gulp-concat');
+var resources = "./build/public/resources/site";
+var paths = {
     js: resources+"/js",
     css: resources+"/css",
     scss: resources+"/scss",
@@ -39,9 +42,8 @@ gulp.task("sass", function () {
 gulp.task("js", function() {
     // ignore .min.js files
     return gulp.src([
-        paths.js+"/*.js",
-        "!"+paths.js+"/*.min.js",
-        "!"+paths.js+"/*/*.min.js"
+            paths.js+"/**/*.js",
+            "!"+paths.js+"/**/*.min.js"
         ])
         .pipe(include()) // include plugin allows includes in js files
         .pipe(jshint()) // run jshin
@@ -64,65 +66,27 @@ gulp.task("templates", function(){
     .pipe(livereload()); // refresh the page
 });
 
-// third party vendor css concat
-gulp.task('vendorstyles', function() {
-  return gulp.src([
-    //   paths.vendor+"/magnific-popup/dist/magnific-popup.css",
-    //   paths.vendor+"/slick-carousel/slick/slick.css",
-    //   paths.vendor+"/slick-carousel/slick/slick-theme.css"
-  ])
-    .pipe(concat('vendorstyles.min.css'))
-    .pipe(gulp.dest(paths.vendor+"/css"));
-});
-
-// third party vendor js concat
-gulp.task('vendorscripts', function() {
-  return gulp.src([
-        // paths.vendor+"/modernizr-stripped/modernizr.js",
-        // paths.vendor+"/moment/min/moment.min.js",
-        // paths.vendor+"/waypoints/lib/noframework.waypoints.min.js",
-        // paths.vendor+"/matchHeight/jquery.matchHeight-min.js",
-        // paths.vendor+"/jquery-validate/dist/jquery.validate.min.js",
-        // paths.vendor+"/materialize/js/parallax.js",
-        // paths.vendor+"/slick-carousel/slick/slick.min.js",
-        //
-        // // GSAP
-        // paths.vendor+"/gsap/src/minified/TimelineMax.min.js",
-        // paths.vendor+"/gsap/src/minified/TimelineLite.min.js",
-        // paths.vendor+"/gsap/src/minified/TweenMax.min.js",
-        // paths.vendor+"/gsap/src/minified/plugins/ScrollToPlugin.min.js",
-        // paths.vendor+"/gsap/src/minified/plugins/CSSPlugin.min.js",
-        // paths.vendor+"/gsap/src/minified/easing/EasePack.min.js",
-        // paths.vendor+"/gsap/src/minified/TweenLite.min.js",
-        //
-        // paths.vendor+"/magnific-popup/dist/jquery.magnific-popup.min.js",
-        // paths.vendor+"/isotope/dist/isotope.pkgd.min.js",
-        // paths.vendor+"/isotope-packery/packery-mode.pkgd.min.js",
-        // paths.vendor+"/jquery-smartresize/jquery.debouncedresize.js",
-  ])
-    .pipe(concat('vendorscripts.min.js'))
-    .pipe(gulp.dest(paths.vendor+"/js"));
-});
-
 // the watch task
 gulp.task("watch", function () {
     livereload.listen();
     gulp.watch(paths.scss+"/**/*.scss", ["sass"]);
-    gulp.watch([paths.js+"/**/*.js", "!"+paths.js+"/**/*.min.js"], ["js"]);
+    gulp.watch([
+        paths.js+"/**/*.js",
+        "!"+paths.js+"/**/*.min.js"],
+        ["js"]);
     gulp.watch(paths.templates+"/**/*.{php,twig,html,json,xml}", ["templates"]);
 });
 
 //imagemin
 gulp.task("imagemin", function(){
     return gulp.src(paths.images+"/**/*")
-        .pipe(imagemin(
-            [
-                imagemin.gifsicle({interlaced: true}),
-                imagemin.jpegtran({progressive: true}),
-                imagemin.optipng({optimizationLevel: 7}),
-                imagemin.svgo({plugins: [{removeViewBox: false}]})
-            ]
-        ))
+        .pipe(imagemin([
+            imageminJpegRecompress({
+                progressive: true,
+                max: 80,
+                min: 70
+            })
+        ]))
         .pipe(gulp.dest(paths.images));
 });
 
