@@ -5,19 +5,27 @@ My own boilerplate for a typical CraftCMS setup. Filled with useful craft config
 
 ![Big Juicy Sass](Big_Juicy_Sass.gif "from 'Drop girl' by IceCube")
 
-## Frameworks
+## Gulp
 
-- Materialize - generally only use the parallax js plugin
+My gulp setup has several tasks which uses:
 
-## SASS/SCSS/CSS
+- Path variables for a easy/quick setup,
+- SASS/JS compiler/linter/sourcemaps
+- Image minifier (imagemin) task using pngquant (lossless) & jpeg recompress
+- Watch task - watches js/sass/template files and uses livereload for autoreloading webpages
+
+## Bower
+
+### SASS/SCSS/CSS
 
 Includes:
 
 - SASS REM (bower) - [https://github.com/ry5n/rem/](https://github.com/ry5n/rem/)
 - Normalize.css (bower) - [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/)
 - Font Awesome (bower) - [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
+- Materialize - generally only use the parallax js plugin
 
-## JS/jQuery
+### JS/jQuery
 - jQuery 1.11.3 (CDN & local fallback (bower))
 - jQuery 2.1.4 (CDN & local fallback (bower))
 - GSAP (bower) - [http://greensock.com/gsap](http://greensock.com/gsap)
@@ -33,7 +41,7 @@ Includes:
 - isotope.js
 - MatchHeight.js
 
-## CraftCMS Plugins
+# CraftCMS Plugins
 
 I'm not going to include any plugins within this repo because they are all updated very frequently, and, their use is very much situational dependent on the project & the client.
 
