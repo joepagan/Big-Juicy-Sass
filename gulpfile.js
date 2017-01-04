@@ -7,7 +7,8 @@ var jshint = require('gulp-jshint');
 var imagemin = require("gulp-imagemin");
     // jpgs
     var imageminJpegRecompress = require('imagemin-jpeg-recompress');
-    //pngs - using built in optipng (best lossless compression)
+    //pngs
+    const imageminPngquant = require('imagemin-pngquant');
 var notify = require("gulp-notify");
 var include = require("gulp-include");
 var livereload = require('gulp-livereload');
@@ -85,7 +86,8 @@ gulp.task("imagemin", function(){
                 progressive: true,
                 max: 80,
                 min: 70
-            })
+            }),
+            imageminPngquant({quality: '75-85'})
         ]))
         .pipe(gulp.dest(paths.images));
 });
