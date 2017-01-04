@@ -3,7 +3,7 @@ Big Juicy Sass
 
 My own boilerplate for a typical CraftCMS setup. Filled with useful craft configs, templates, js, and css.
 
-![Big Juicy Sass](BigJuicySass.gif "from 'Drop girl' by IceCube")
+![Big Juicy Sass](Big_Juicy_Sass.gif "from 'Drop girl' by IceCube")
 
 ## Frameworks
 
