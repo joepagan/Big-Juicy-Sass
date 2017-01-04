@@ -9,10 +9,10 @@ My own boilerplate for a typical CraftCMS setup. Filled with useful craft config
 
 My gulp setup has several tasks which uses:
 
-- Path variables for a easy/quick setup,
+- Path variables for a easy/quick setup
 - SASS/JS compiler/linter/sourcemaps
 - Image minifier (imagemin) task using pngquant (lossless) & jpeg recompress
-- Watch task - watches js/sass/template files and uses livereload for autoreloading webpages
+- Watch task - watches js/sass/template files and uses livereload
 
 ## Bower
 
