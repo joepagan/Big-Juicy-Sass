@@ -1,20 +1,20 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var sourcemaps = require("gulp-sourcemaps");
-var uglify = require("gulp-uglify");
-var rename = require("gulp-rename");
-var jshint = require('gulp-jshint');
-var imagemin = require("gulp-imagemin");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const sourcemaps = require("gulp-sourcemaps");
+const uglify = require("gulp-uglify");
+const rename = require("gulp-rename");
+const jshint = require('gulp-jshint');
+const imagemin = require("gulp-imagemin");
     // jpgs
-    var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+    const imageminJpegRecompress = require('imagemin-jpeg-recompress');
     //pngs
     const imageminPngquant = require('imagemin-pngquant');
-var notify = require("gulp-notify");
-var include = require("gulp-include");
-var livereload = require('gulp-livereload');
-var concat = require('gulp-concat');
-var resources = "./build/public/resources/site";
-var paths = {
+const notify = require("gulp-notify");
+const include = require("gulp-include");
+const livereload = require('gulp-livereload');
+const concat = require('gulp-concat');
+const resources = "./build/public/resources/site";
+const paths = {
     js: resources+"/js",
     css: resources+"/css",
     scss: resources+"/scss",
