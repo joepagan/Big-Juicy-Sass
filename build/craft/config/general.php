@@ -17,10 +17,13 @@ return array(
         'sendPoweredByHeader' => false,
         'allowedFileExtensions' => 'aiff, asf, avi, csv, doc, docx, gif, htm, html, jpeg, jpg, mov, mp3, mp4, m4a, mpeg, mpg, ods, odt, ogg, ogv, pdf, png, ppt, pptx, qt, rtf, svg, txt, vob, wav, webm, wma, wmv, xls, xlsx',
         'maxUploadFileSize' => '10485760', // 10mb
-        //'name'=>'',
+        // 'name'=>'',
         'defaultCpLanguage' => 'en_gb',
         'phpSessionName' => 'sessionId',
         'timezone' => 'Europe/London',
+        'defaultWeekStartDay' => 0,
+        'enableCsrfProtection' => true,
+    	'devMode' => false,
 		'environmentVariables' => array(
 			'fileSystemPath' => '../../public'
 		)
