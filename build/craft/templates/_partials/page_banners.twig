@@ -14,14 +14,18 @@
 			</div>
 			{% if banner.bannerImage.first() %}
 				<div class="parallax-container">
-			      <div class="parallax"><img src="{{ banner.bannerImage.first().getUrl(
-					  {
-						  mode:"crop",
-						  width:1920,
-						  height:660,
-						  quality:80
-					  }
-				  ) }}" alt="{{ banner.bannerImage.first().alt }}"></div>
+			      <div class="parallax">
+					  {% set image = banner.bannerImage.first() %}
+					  {% set transformedImages = craft.imager.transformImage(image, [
+                              { width: 1920 },
+                              { width: 1200 },
+                              { width: 960 },
+								{ width: 720 },
+								{ width: 480 }
+                              ], [{ mode: "crop", height: 660, jpegQuality: 80 }]) %}
+
+				  	  <img src="{{ craft.imager.base64Pixel(16, 9) }}" srcset="{{ craft.imager.srcset(transformedImages) }}" alt="{{ image.alt }}">
+			      </div>
 			    </div>
 			{% endif %}
 		{% endfor %}

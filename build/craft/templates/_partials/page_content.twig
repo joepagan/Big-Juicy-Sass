@@ -32,12 +32,31 @@
 
                     {% case "image" %}
 
-                        <div class="img_block block">
+                        {% if block.image.first() %}
 
-                            {# if there is an image #}
-                            <img src="{{ (block.image and entry.image.width>960) ? ( entry.image.first().getUrl({ mode:'resize', width:960, quality:80 }) ?? entry.image.first().url ) : '/fallback_image.jpg' }}" alt="{{ block.image.first().alt }}" >
+                            <div class="img_block block">
 
-                        </div>
+                                {% for image in block.image %}
+
+                                    {% set transformedImages = craft.imager.transformImage(image, [
+                                        { width: 720 },
+                                        { width: 600 },
+                                        { width: 400 }
+                                        ], [{ mode: "fit", jpegQuality: 80 }]) %}
+                                    <figure>
+                                        <a href="{{ image.url }}" class="lightbox image">
+                                            <img src="{{ craft.imager.base64Pixel(16, 9) }}" srcset="{{ craft.imager.srcset(transformedImages) }}" alt="{{ image.alt }}">
+                                        </a>
+                                        {% if image.caption %}
+                                            <figcaption>{{ image.caption }}</figcaption>
+                                        {% endif %}
+                                    </figure>
+
+                                {% endfor %}
+
+                            </div>
+
+                        {% endif %}
 
                     {% case "button" %}
 
