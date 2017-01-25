@@ -48,13 +48,12 @@ I'm not going to include any plugins within this repo because they are all updat
 ### FormBuilder2
 [https://github.com/roundhouse/FormBuilder-2-Craft-CMS](https://github.com/roundhouse/FormBuilder-2-Craft-CMS)<br> [https://github.com/roundhouse/FormBuilder-2-Craft-CMS/archive/master.zip](https://github.com/roundhouse/FormBuilder-2-Craft-CMS/archive/master.zip)
 
-What I think to be the best form solution for Craft at the current time. It's free, and, just as good as the only other usable costly alternative "Sprout Forms".
+Formbuilder2 is probably the best free solution for the time being.
 
-### SEOmatic
-[https://github.com/nystudio107/seomatic](https://github.com/nystudio107/seomatic)<br>
-[https://github.com/nystudio107/seomatic/archive/master.zip](https://github.com/nystudio107/seomatic/archive/master.zip)
+### Freeform
+[https://solspace.com/craft/freeform](https://solspace.com/craft/freeform)
 
-I only started using this plugin in the past week, but, now I would deem it to be a "core" plugin, it adds extensive relevant schema, and, appears to be extreme customisable. A great addition to your site, which, should bring many benefits to your site in SERPs.
+Not tried it yet, but, their ExpressionEngine plugin was the best for it's time. $99 price tag maybe off putting, though it might be the best optino.
 
 ### Minify
 [https://github.com/nystudio107/minify](https://github.com/nystudio107/minify)<br>
@@ -80,6 +79,29 @@ A very simple plugin which makes a handful of php functions available in CraftCM
 [https://github.com/engram-design/ImageResizer/archive/master.zip](https://github.com/engram-design/ImageResizer/archive/master.zip)
 
 Quite often it is the case that the users that have been provided access to a CMS unfortunately are not very technical. This has often resulted in dramatically large images being uploaded to a CMS, as an example this could be an image with dimensions of 8000px x 6000px, this plugin resizes images like that to parameters that you can set in the backend. I normally set this to be a max width & height of 2000px, which saves server space, and, potentially a broken webpage.
+
+### Imager
+[https://github.com/aelvan/Imager-Craft](https://github.com/aelvan/Imager-Craft)<br>
+[https://github.com/aelvan/Imager-Craft/archive/master.zip](https://github.com/aelvan/Imager-Craft/archive/master.zip)
+
+Imager allows you to optimise the images in your templates... Basically, the plugin replace's Craft's built in image transforms, Craft, unfortunately, does not optimise your images _that_ well. Imager utilises lossy compression with [pngquant](https://pngquant.org/) for pngs (similar to [TinyPNG](https://tinypng.com/) compression), and other jpg compression such as [mozjpeg](https://github.com/mozilla/mozjpeg) This plugin allows you to utilise the srcset attribute to it's full potential, and creates individual images for every width  you set. Here is an example:
+
+    {% set transformedImages = craft.imager.transformImage(img, [
+        { width: 1200 },
+        { width: 1000 },
+        { width: 800 },
+        { width: 600, jpegQuality: 75 },
+        { width: 400, jpegQuality: 70 }
+        ], { ratio: 4/3, mode: "fit", jpegQuality: 80 }) %}
+
+    <figure>
+        <a href="{{ img.url }}">
+            <img src="{{ craft.imager.base64Pixel(4, 3) }}" srcset="{{ craft.imager.srcset(transformedImages) }}" alt="{{ img.alt }}" title="{{ img.title }}">
+        </a>
+        {% if img.caption %}
+            <figcaption>{{ img.caption }}</figcaption>
+        {% endif %}
+    </figure>
 
 ### Hacksaw
 [https://github.com/ryanshrum/hacksaw](https://github.com/ryanshrum/hacksaw)<br>
