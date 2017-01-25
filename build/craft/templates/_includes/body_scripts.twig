@@ -14,9 +14,9 @@
 
 {# General scripts - now loaded in with gulp concat #}
 
-{# <script src="/resources/vendor/modernizr-stripped/modernizr.js"></script> #}
-{# <script src="/resources/vendor/moment/min/moment.min.js"></script> #}
-{# <script src="/resources/vendor/waypoints/lib/jquery.waypoints.min.js"></script> #}
+{# {% includeJsFile "/resources/vendor/modernizr-stripped/modernizr.js" %} #}
+{# {% includeJsFile "/resources/vendor/moment/min/moment.min.js" %} #}
+{# {% includeJsFile "/resources/vendor/waypoints/lib/jquery.waypoints.min.js" %} #}
 {# {% includeJsFile "/resources/vendor/jquery-validate/dist/jquery.validate.min.js" %} #}
 {# {% includeJsFile "/resources/vendor/slick-carousel/slick/slick.min.js" %} #}
 {# {% includeJsFile "/resources/vendor/matchHeight/jquery.matchHeight-min.js" %} #}
@@ -24,9 +24,9 @@
 {# {% includeJsFile "/resources/vendor/jquery-smartresize/jquery.debouncedresize.js" %} #}
 
 {# GSAP #}
-{# <script src="/resources/vendor/gsap/src/minified/TimelineMax.min.js"></script> #}
-{# <script src="/resources/vendor/gsap/src/minified/TimelineLite.min.js"></script> #}
-{# <script src="/resources/vendor/gsap/src/minified/TweenMax.min.js"></script> #}
+{# {% includeJsFile "/resources/vendor/gsap/src/minified/TimelineMax.min.js" %} #}
+{# {% includeJsFile "/resources/vendor/gsap/src/minified/TimelineLite.min.js" %} #}
+{# {% includeJsFile "/resources/vendor/gsap/src/minified/TweenMax.min.js" %} #}
 {# {% includeJsFile "/resources/vendor/gsap/src/minified/plugins/ScrollToPlugin.min.js" %} #}
 {# {% includeJsFile "/resources/vendor/gsap/src/minified/plugins/CSSPlugin.min.js" %} #}
 {# {% includeJsFile "/resources/vendor/gsap/src/minified/easing/EasePack.min.js" %} #}
@@ -34,13 +34,14 @@
 
 
 {# isotope #}
-{# <script src="/resources/vendor/isotope/dist/isotope.pkgd.min.js"></script> #}
-{# <script src="/resources/vendor/isotope-packery/packery-mode.pkgd.min.js"></script> #}
+{# {% includeJsFile "/resources/vendor/isotope/dist/isotope.pkgd.min.js" %} #}
+{# {% includeJsFile "/resources/vendor/isotope-packery/packery-mode.pkgd.min.js" %} #}
 
 {# If you want to add any others to your project easy just duplicate the line below #}
 {# <script src="/resources/vendor/"></script> #}
 {# <script src="/resources/site/js/"></script> #}
+{# {% includeJsFile "/resources/vendor/script/script.min.js" %} #}
+{# {% includeJsFile "/resources/site/js/script.min.js" %} #}
 
-{% includeJsFile "/resources/vendor/js/vendorscripts.min.js" %}
-
+{% includeJsFile "/resources/site/js/includes/svg_handling.min.js" %}
 {% includeJsFile "/resources/site/js/global.min.js" %}
