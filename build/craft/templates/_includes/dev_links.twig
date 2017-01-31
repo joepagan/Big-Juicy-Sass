@@ -2,27 +2,13 @@
 
     {% if currentUser.can('accessCp') %}
 
-        <div class="dev_links">
-            {% include "_partials/button_primary"
-                with {
-                    "text": "Control Panel",
-                    "theme": "light",
-                    "link": cpUrl(),
-                    "target": "_blank"
-                }
-            %}
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            {% include "_partials/button_primary"
-                with {
-                    "text": "Edit entry",
-                    "theme": "light",
-                    "link": entry.getCpEditUrl(),
-                    "target": "_blank"
-                }
-            %}
-            &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dev_links" style="position:fixed; bottom:10px; left:10px;">
 
-            <a href="#" onclick="$('.dev_links').hide(); return false;">close</a>
+            <a href="{{ cpUrl() }}" style="display:inline-block;background:#333;color:#fff;border-radius:3px; padding:14px 18px; text-decoration:none;margin-right:10px;">Control Panel</a>
+
+            <a href="{{ entry.getCpEditUrl() }}" style="display:inline-block;background:#333;color:#fff;border-radius:3px; padding:14px 18px; text-decoration:none;margin-right:10px;">Edit entry</a>
+
+            <a href="#" onclick="$('.dev_links').hide(); return false;" style="display:inline-block;background:#333;color:#fff;border-radius:3px; padding:14px 18px; text-decoration:none;">x</a>
 
         </div>
 
